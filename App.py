@@ -24,11 +24,26 @@ def display_mcat_formulas():
     st.write("T = Temperature (in Kelvin)")
     st.write("The Ideal Gas Law describes the behavior of ideal gases under varying conditions of pressure, volume, temperature, and number of moles.")
 
+    st.header("Biology Concepts")
+    st.subheader("Growth Rate")
+    st.write("Growth Rate = (Final Size - Initial Size) / Initial Size")
+    st.write("The Growth Rate formula is used to calculate the rate of growth of a population or organism over time.")
+
+    st.header("Biochemistry Formulas")
+    st.subheader("Michaelis-Menten Equation")
+    st.write("V0 = (Vmax * [S]) / (Km + [S])")
+    st.write("Where:")
+    st.write("V0 = Initial reaction velocity")
+    st.write("Vmax = Maximum reaction velocity")
+    st.write("[S] = Substrate concentration")
+    st.write("Km = Michaelis constant")
+    st.write("The Michaelis-Menten Equation describes the rate of enzyme-catalyzed reactions as a function of substrate concentration.")
+
 # Function to solve formulas based on user inputs
 def formula_solver():
     st.title("Formula Solver")
 
-    selected_formula = st.selectbox("Select Formula to Solve", ["Newton's Second Law", "Ideal Gas Law"])
+    selected_formula = st.selectbox("Select Formula to Solve", ["Newton's Second Law", "Ideal Gas Law", "Growth Rate", "Michaelis-Menten Equation"])
 
     if selected_formula == "Newton's Second Law":
         mass = st.number_input("Enter Mass (kg):")
@@ -37,7 +52,7 @@ def formula_solver():
 
         if solve_button:
             force = mass * acceleration
-            st.write(f"The force (F) is {force} Newtons.")
+            st.success(f"The force (F) is {force} Newtons.")
 
     elif selected_formula == "Ideal Gas Law":
         pressure = st.number_input("Enter Pressure (atm):")
@@ -50,8 +65,27 @@ def formula_solver():
             ideal_gas_constant = 0.0821
             gas_constant_term = moles * ideal_gas_constant * temperature
             ideal_gas_law_formula = pressure * volume
-            st.write(f"The PV term is {ideal_gas_law_formula} atm * L = nRT term = {gas_constant_term} atm * L.")
-            st.write("Therefore, PV = nRT is satisfied.")
+            st.success(f"The PV term is {ideal_gas_law_formula} atm * L = nRT term = {gas_constant_term} atm * L.")
+            st.success("Therefore, PV = nRT is satisfied.")
+
+    elif selected_formula == "Growth Rate":
+        initial_size = st.number_input("Enter Initial Size:")
+        final_size = st.number_input("Enter Final Size:")
+        solve_button = st.button("Calculate Growth Rate")
+
+        if solve_button:
+            growth_rate = (final_size - initial_size) / initial_size
+            st.success(f"The Growth Rate is {growth_rate:.2f}.")
+
+    elif selected_formula == "Michaelis-Menten Equation":
+        vmax = st.number_input("Enter Vmax:")
+        substrate_concentration = st.number_input("Enter Substrate Concentration:")
+        km = st.number_input("Enter Michaelis Constant:")
+        solve_button = st.button("Calculate Initial Reaction Velocity (V0)")
+
+        if solve_button:
+            initial_velocity = (vmax * substrate_concentration) / (km + substrate_concentration)
+            st.success(f"The Initial Reaction Velocity (V0) is {initial_velocity:.2f}.")
 
 # Main function to run the Streamlit app
 def main():
