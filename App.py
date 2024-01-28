@@ -83,9 +83,9 @@ def formula_solver():
     km = st.number_input("Enter Michaelis Constant:", format="%e")  # Enable scientific notation
     solve_button = st.button("Calculate Initial Reaction Velocity (V0)")
 
-    if solve_button:
-        initial_velocity = (vmax * substrate_concentration) / (km + substrate_concentration)
-        st.success(f"The Initial Reaction Velocity (V0) is {initial_velocity:.2e}.")
+        if solve_button:
+            initial_velocity = (vmax * substrate_concentration) / (km + substrate_concentration)
+            st.success(f"The Initial Reaction Velocity (V0) is {initial_velocity:.2e}.")
 
 # Main function to run the Streamlit app
 def main():
