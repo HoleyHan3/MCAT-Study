@@ -1,0 +1,72 @@
+# formulas.py
+
+import streamlit as st
+
+def display_mcat_formulas():
+    st.title("MCAT Formulas and Explanations")
+
+    st.header("Physics Formulas")
+
+    st.subheader("Newton's Laws of Motion")
+    st.write("1. Newton's First Law: An object remains in uniform motion unless acted upon by a net external force.")
+    st.write("2. Newton's Second Law: $$ F = m \\times a $$")
+    st.write("3. Newton's Third Law: For every action, there is an equal and opposite reaction.")
+
+    st.subheader("Kinematic Equations")
+    st.write("1. $$ v = u + at $$")
+    st.write("2. $$ s = ut + \\frac{1}{2}at^2 $$")
+    st.write("3. $$ v^2 = u^2 + 2as $$")
+    st.write("4. $$ s = \\frac{1}{2}(u + v)t $$")
+    st.write("Where:")
+    st.write("$$ v = \\text{Final velocity (m/s)} $$")
+    st.write("$$ u = \\text{Initial velocity (m/s)} $$")
+    st.write("$$ a = \\text{Acceleration (m/s}^2$$")
+    st.write("$$ s = \\text{Displacement (m)} $$")
+    st.write("$$ t = \\text{Time (s)} $$")
+
+    st.subheader("Work and Energy")
+    st.write("1. Work-Energy Theorem: $$ W = \\Delta KE $$")
+    st.write("2. Potential Energy: $$ PE = mgh $$")
+    st.write("3. Kinetic Energy: $$ KE = \\frac{1}{2}mv^2 $$")
+
+    st.header("Chemistry Formulas")
+
+    st.subheader("Gas Laws")
+    st.write("1. Ideal Gas Law: $$ PV = nRT $$")
+    st.write("2. Boyle's Law: $$ P_1V_1 = P_2V_2 $$")
+    st.write("3. Charles' Law: $$ \\frac{V_1}{T_1} = \\frac{V_2}{T_2} $$")
+    st.write("4. Avogadro's Law: $$ \\frac{V_1}{n_1} = \\frac{V_2}{n_2} $$")
+
+    st.subheader("Thermodynamics")
+    st.write("1. First Law of Thermodynamics: $$ \\Delta U = Q - W $$")
+    st.write("2. Enthalpy Change: $$ \\Delta H = H_{products} - H_{reactants} $$")
+
+    st.header("Biology and Biochemistry Formulas")
+
+    st.subheader("Enzyme Kinetics")
+    st.write("1. Michaelis-Menten Equation: $$ V_0 = \\frac{V_{max}[S]}{K_m + [S]} $$")
+    st.write("Where:")
+    st.write("$$ V_0 = \\text{Initial Reaction Velocity} $$")
+    st.write("$$ V_{max} = \\text{Maximum Reaction Velocity} $$")
+    st.write("$$ [S] = \\text{Substrate Concentration} $$")
+    st.write("$$ K_m = \\text{Michaelis Constant} $$")
+
+    st.subheader("Biochemical Pathways")
+    st.write("1. Glycolysis: Breakdown of glucose into pyruvate.")
+
+    st.header("Psychology and Sociology Formulas")
+
+    st.subheader("Psychological Theories")
+    st.write("1. Piaget's Stages of Cognitive Development: Sensorimotor, Preoperational, Concrete Operational, Formal Operational.")
+
+    st.subheader("Sociological Concepts")
+    st.write("1. Functionalism: Society is a system of interconnected parts that work together.")
+
+    st.subheader("Cultural Factors")
+    st.write("1. Cultural Relativism: Understanding beliefs and behaviors within the cultural context.")
+
+    st.subheader("Social Structures")
+    st.write("1. Social Stratification: Hierarchical arrangement of individuals or groups.")
+
+    st.subheader("Group Behavior")
+    st.write("1. Groupthink: Phenomenon where group members prioritize consensus over critical evaluation.")
