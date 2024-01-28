@@ -89,7 +89,7 @@ def formula_solver():
 
 # Main function to run the Streamlit app
 def main():
-    st.sidebar.title("MCAT Helper")
+    st.sidebar.title("MCAT Calculation Helper")
     menu_choice = st.sidebar.radio("Select Option", ["MCAT Formulas", "Formula Solver"])
 
     if menu_choice == "MCAT Formulas":
