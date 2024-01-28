@@ -78,10 +78,10 @@ def formula_solver():
             st.success(f"The Growth Rate is {growth_rate:.2f}.")
             
     elif selected_formula == "Michaelis-Menten Equation":
-    vmax = st.number_input("Enter Vmax:", format="%e")  # Enable scientific notation
-    substrate_concentration = st.number_input("Enter Substrate Concentration:", format="%e")  # Enable scientific notation
-    km = st.number_input("Enter Michaelis Constant:", format="%e")  # Enable scientific notation
-    solve_button = st.button("Calculate Initial Reaction Velocity (V0)")
+        vmax = st.number_input("Enter Vmax:", format="%e")  # Enable scientific notation
+        substrate_concentration = st.number_input("Enter Substrate Concentration:", format="%e")  # Enable scientific notation
+        km = st.number_input("Enter Michaelis Constant:", format="%e")  # Enable scientific notation
+        solve_button = st.button("Calculate Initial Reaction Velocity (V0)")
 
         if solve_button:
             initial_velocity = (vmax * substrate_concentration) / (km + substrate_concentration)
