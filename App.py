@@ -4,7 +4,7 @@ from pages import _0_home, _1_bio_biochem, _2_chem_phys, _3_psych_soc, _4_cars, 
 
 def main():
     st.sidebar.title("MCAT Study App")
-    page = st.sidebar.radio("Navigation", ["Home", "Chem/Phys", "CARS", "Bio/Biochem", "Psych/Soc"])
+    page = st.sidebar.radio("Navigation", ["Home","Bio/Biochem" ,"Chem/Phys", "Psych/Soc", "CARS", "About"])
 
     if page == "Home":
         _0_home.show()
@@ -16,7 +16,7 @@ def main():
         _3_psych_soc.show()
     elif page == "CARS":
         _4_cars.show()
-    elif page == "CARS":
+    elif page == "About":
         _5_about.show()
 
 if __name__ == "__main__":
