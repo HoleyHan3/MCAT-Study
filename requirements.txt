@@ -1,4 +1,7 @@
 streamlit
 streamlit-extras
+<<<<<<< HEAD
 matplotlib
 numpy
+=======
+>>>>>>> df72b70474210aafe7d4b4874d8602637ad5bb1c
