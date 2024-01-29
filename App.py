@@ -1,20 +1,23 @@
 import streamlit as st
-from pages import 0_home, chem_phys, cars, 1_bio_biochem, psych_soc
+from pages import _0_home, _1_bio_biochem, _2_chem_phys, _3_psych_soc, _4_cars, _5_about
+
 
 def main():
     st.sidebar.title("MCAT Study App")
     page = st.sidebar.radio("Navigation", ["Home", "Chem/Phys", "CARS", "Bio/Biochem", "Psych/Soc"])
 
     if page == "Home":
-        _home.show()
-    elif page == "Chem/Phys":
-        chem_phys.show()
-    elif page == "CARS":
-        cars.show()
+        _0_home.show()
     elif page == "Bio/Biochem":
-        bio_biochem.show()
+        _1_bio_biochem.show()
+    elif page == "Chem/Phys":
+        _2_chem_phys.show()
     elif page == "Psych/Soc":
-        psych_soc.show()
+        _3_psych_soc.show()
+    elif page == "CARS":
+        _4_cars.show()
+    elif page == "CARS":
+        _5_about.show()
 
 if __name__ == "__main__":
     main()
