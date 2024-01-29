@@ -1,5 +1,5 @@
 import streamlit as st
-from components.formula import FormulaManager
+from ..components.formula import FormulaManager
 
 def show():
     st.title("Chemical and Physical Foundations of Biological Systems")
