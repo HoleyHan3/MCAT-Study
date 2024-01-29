@@ -1,7 +1,7 @@
 import streamlit as st
 
 def show():
-    st.title("Psychological, Social, and Biological Foundations of Behavior")
-    st.write("This section explores the intersection of psychology, sociology, and biology.")
-    st.write("Understand human behavior, cognition, social structures, and more.")
-    # Include interactive elements for studying psychology, sociology, and related topics
+    st.title("Psychology and Sociology")
+    st.write("This section covers topics related to psychology and sociology.")
+    st.write("Topics may include: social psychology, developmental psychology, personality, sociology, and more.")
+    st.write("Engage with practice questions and case studies to apply concepts.")

@@ -1,5 +1,5 @@
 import streamlit as st
-from pages import _0_home, _1_bio_biochem, _2_chem_phys, _3_psych_soc, _4_cars, _5_about
+from pages import _0_home, _1_bio_biochem, _2_chem_phys, _3_psych_soc, _4_cars, about
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
     elif page == "CARS":
         _4_cars.show()
     elif page == "About":
-        _5_about.show()
+        about.show()
 
 if __name__ == "__main__":
     main()

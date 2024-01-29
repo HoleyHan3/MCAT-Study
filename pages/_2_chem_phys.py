@@ -1,7 +1,7 @@
 import streamlit as st
-from ..components.formula import FormulaManager
 
 def show():
-    st.title("Chemical and Physical Foundations of Biological Systems")
-    formula_manager = FormulaManager()
-    formula_manager.display_formulas()
+    st.title("Chemistry and Physics")
+    st.write("This section covers topics related to chemistry and physics.")
+    st.write("Topics may include: general chemistry, organic chemistry, thermodynamics, kinetics, electrochemistry, optics, and more.")
+    st.write("Explore visualizations and interactive simulations to grasp key concepts.")
