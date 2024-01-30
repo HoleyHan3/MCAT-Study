@@ -11,7 +11,7 @@ st.write("This section provides information about the MCAT.")
 
 st.subheader("About the Test", divider='blue')
 """ 
-* 4 Sections
+* **4 Sections**
     * Chemical and Physical Foundations of Biological Systems (59 Questions)
         * 10 passage-based sets of questions
             *4-6 questions per set
