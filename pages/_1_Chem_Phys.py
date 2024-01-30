@@ -39,8 +39,6 @@ with col1:
     st.write("- Flashcards for memorizing key equations.")
     st.write("- Links to online textbooks and video lectures.")
 
-
-
 with col2:
     st.header('Physics',divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 
