@@ -4,18 +4,17 @@ st.title("Chemistry and Physics")
 st.write("This section covers topics related to chemistry and physics.")
 st.write("Topics include general chemistry, organic chemistry, thermodynamics, kinetics, and more.")
 
-st.header('Chemistry',divider='blue')
-
 col1, col2 = st.columns(2)
+col1.header('Chemistry',divider='blue')
 
-col1.header("General Chemistry:")
+col1.subheader("General Chemistry:")
 st.markdown("""Topics**
     * Math
     * Thermodynamics""")
 
 st.expander("Official AAMC Sample Problems A")
 q1 = st.radio(
-    "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?**",
+    "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
     ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
 
 
