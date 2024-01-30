@@ -1,61 +1,77 @@
-import streamlit as st
-import json
+# calculation_engine.py
 
-class FormulaManager:
-    def __init__(self, storage_file='equations.json'):
-        self.storage_file = storage_file
-        self.load_formulas()
-    
-    def load_formulas(self):
-        try:
-            with open(self.storage_file, 'r') as file:
-                self.formulas = json.load(file)
-        except FileNotFoundError:
-            self.formulas = []
+class CalculationEngine:
+    def __init__(self):
+        pass
 
-    def save_formulas(self):
-        with open(self.storage_file, 'w') as file:
-            json.dump(self.formulas, file, indent=4)
+    def calculate_pressure(self, volume, temperature):
+        """
+        Calculate pressure using the ideal gas law equation: P = nRT/V.
+        
+        Args:
+        - volume (float): Volume of the gas.
+        - temperature (float): Temperature of the gas.
+        
+        Returns:
+        - float: Calculated pressure.
+        """
+        if volume <= 0 or temperature <= 0:
+            raise ValueError("Volume and temperature must be positive.")
+        # Placeholder calculation for pressure
+        return volume * temperature
 
-    def add_formula(self, name, formula_latex):
-        if not name or not formula_latex:
-            st.error("Name and LaTeX representation are required.")
-            return
+    def calculate_volume(self, pressure, temperature):
+        """
+        Calculate volume using the ideal gas law equation: V = nRT/P.
+        
+        Args:
+        - pressure (float): Pressure of the gas.
+        - temperature (float): Temperature of the gas.
+        
+        Returns:
+        - float: Calculated volume.
+        """
+        if pressure <= 0 or temperature <= 0:
+            raise ValueError("Pressure and temperature must be positive.")
+        # Placeholder calculation for volume
+        return pressure / temperature
 
-        if any(formula['name'] == name for formula in self.formulas):
-            st.error("A formula with the same name already exists.")
-            return
+    def calculate_temperature(self, pressure, volume):
+        """
+        Calculate temperature using the ideal gas law equation: T = PV/nR.
+        
+        Args:
+        - pressure (float): Pressure of the gas.
+        - volume (float): Volume of the gas.
+        
+        Returns:
+        - float: Calculated temperature.
+        """
+        if pressure <= 0 or volume <= 0:
+            raise ValueError("Pressure and volume must be positive.")
+        # Placeholder calculation for temperature
+        return pressure / volume
 
-        self.formulas.append({'name': name, 'formula_latex': formula_latex})
-        self.save_formulas()
-        st.success("Formula added successfully.")
-
-    def display_formulas(self):
-        st.subheader("Formulas:")
-        if not self.formulas:
-            st.write("No formulas added yet.")
-        else:
-            for formula in self.formulas:
-                st.markdown(f"**{formula['name']}**:")
-                st.latex(f"{formula['name']}: {formula['formula_latex']}")
-                st.write("---")  # Separator between formulas
-
-    def clear_formulas(self):
-        self.formulas = []
-        self.save_formulas()
-        st.success("Formulas cleared successfully.")
-
-    def get_formula_names(self):
-        return [formula['name'] for formula in self.formulas]
-
-    def get_formula_latex(self, name):
-        for formula in self.formulas:
-            if formula['name'] == name:
-                return formula['formula_latex']
-        return None
-
-    def get_formula_by_name(self, name):
-        for formula in self.formulas:
-            if formula['name'] == name:
-                return formula
-        return None
+    def convert_units(self, value, from_unit, to_unit):
+        """
+        Convert a value from one unit to another.
+        
+        Args:
+        - value (float): Value to convert.
+        - from_unit (str): Unit to convert from.
+        - to_unit (str): Unit to convert to.
+        
+        Returns:
+        - float: Converted value.
+        """
+        # Define conversion factors for different units (e.g., Pa, atm, etc.)
+        conversion_factors = {
+            "Pa": 1.0,
+            "atm": 101325,
+            # Add more conversion factors as needed
+        }
+        if from_unit not in conversion_factors or to_unit not in conversion_factors:
+            raise ValueError("Invalid unit conversion.")
+        # Perform unit conversion
+        converted_value = value * conversion_factors[from_unit] / conversion_factors[to_unit]
+        return converted_value

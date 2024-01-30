@@ -1,5 +1,11 @@
 import streamlit as st
 import json
+import os
+
+# Get the path to the equations.json file
+current_dir = os.path.dirname(__file__)
+equations_file_path = os.path.join(current_dir, '../data/equations.json')
+
 
 class FormulaManager:
     def __init__(self, storage_file='equations.json'):
