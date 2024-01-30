@@ -6,6 +6,10 @@ st.write("Here you can find useful memory aids and tricks to help you remember k
 
 with st.expander("**Physics Mnemonics**"):
     st.markdown("- **FBD**:  \n Fido Bit Donkey (Forces in the same direction)")
+    st.markdown("- **Speed of Light**:  \n *Einstein's Formula: Energy Equals Mass times the Speed of Light Squared*")
+    st.markdown("- **Newton's Laws of Motion**:  \n *1. An Object in Motion Stays in Motion  \n 2. Force Equals Mass times Acceleration  \n 3. For Every Action, There is an Equal and Opposite Reaction*")
+    st.markdown("- **Electromagnetic Spectrum**:  \n *Red Monkeys Invariably Use X-ray Glasses* (Radio, Microwave, Infrared, Ultraviolet, Visible, X-ray, Gamma)")
+
 
 with st.expander("**Chemistry Mnemonics**"):
     st.markdown("- **OIL RIG**:  \n Oxidation Is Losing, Reduction Is Gaining (Redox Reactions)")
@@ -16,7 +20,7 @@ with st.expander("**Biology Mnemonics**"):
     st.markdown("- **Order of Taxonomy**:  \n *Dear King Philip Came Over For Good Soup* (Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species)")
     st.markdown("- **DNA Base Pairs**:  \n *A-T, G-C* (Adenine-Thymine, Guanine-Cytosine)")
     st.markdown("- **Mitosis Phases**:  \n *PMAT - Prophase, Metaphase, Anaphase, Telophase*")
-    st.markdown("- **Photosynthesis Reactants and Products**:  \n *H2O + CO2 + light energy -> C6H12O6 + O2* (Water + Carbon dioxide + light energy -> Glucose + Oxygen)")
+    st.markdown("- **Photosynthesis Reactants and Products**:  \n *$H_2O + CO_2 + light energy -> C_6H_12O_6 + O_2$* (Water + Carbon dioxide + light energy -> Glucose + Oxygen)")
     st.markdown("- **Classification of Living Organisms**:  \n *Kingdom, Phylum, Class, Order, Family, Genus, Species*")
 
 with st.expander("**Anatomy Mnemonics**"):
