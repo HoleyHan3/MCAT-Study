@@ -12,7 +12,7 @@ st.write("- Virtual laboratory experiments.")
 st.write("- Flashcards for memorizing key equations.")
 st.write("- Links to online textbooks and video lectures.")
 
-st.header('Physics',divider='blue')
+st.header('Physics',divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 st.subheader("Features:")
 
 st.write("- Step-by-step problem-solving guides.")
