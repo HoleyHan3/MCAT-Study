@@ -6,12 +6,14 @@ st.write("Topics include general chemistry, organic chemistry, thermodynamics, k
 
 st.header('Chemistry',divider='blue')
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns(2,"medium")
 
-col1.header("General Chemistry:")
-st.markdown("""Topics**
-    * Math
-    * Thermodynamics""")
+container1 = st.container(border=True)
+col1.container1(
+    col1.markdown("""**General Chemistry:**")
+            * *Topics*
+            * Math
+            * Thermodynamics""")
 
 st.expander("Official AAMC Sample Problems A")
 q1 = st.radio(
