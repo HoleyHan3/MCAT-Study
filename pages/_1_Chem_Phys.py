@@ -14,22 +14,22 @@ with col1:
     
     st.expander("Official AAMC Sample Problem 2")
     st.radio(
-    "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
+    "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?**",
     ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
 
 
-st.subheader('Organic Chemistry', anchor='Orgo',divider='green')
-st.write("- Step-by-step problem-solving guides.")
-st.write("- Virtual laboratory experiments.")
-st.write("- Flashcards for memorizing key equations.")
-st.write("- Links to online textbooks and video lectures.")
+    st.subheader('Organic Chemistry', anchor='Orgo',divider='green')
+    st.write("- Step-by-step problem-solving guides.")
+    st.write("- Virtual laboratory experiments.")
+    st.write("- Flashcards for memorizing key equations.")
+    st.write("- Links to online textbooks and video lectures.")
 
 
-st.header('Lab Techniques',divider='orange')
-st.write("- Step-by-step problem-solving guides.")
-st.write("- Virtual laboratory experiments.")
-st.write("- Flashcards for memorizing key equations.")
-st.write("- Links to online textbooks and video lectures.")
+    st.header('Lab Techniques',divider='orange')
+    st.write("- Step-by-step problem-solving guides.")
+    st.write("- Virtual laboratory experiments.")
+    st.write("- Flashcards for memorizing key equations.")
+    st.write("- Links to online textbooks and video lectures.")
 
 
 with col2:
