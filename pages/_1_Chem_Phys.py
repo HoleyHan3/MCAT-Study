@@ -5,7 +5,7 @@ st.write("This section covers topics related to chemistry and physics.")
 st.write("Topics include general chemistry, organic chemistry, thermodynamics, kinetics, and more.")
 
 col1, col2 = st.columns(2)
-col1.header('Chemistry',divider='blue')
+col1.header('Chemistry')
 
 col1.subheader("General Chemistry:")
 st.markdown("""Topics**
