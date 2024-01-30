@@ -8,12 +8,13 @@ col1, col2 = st.columns(2)
 col1.header('Chemistry', divider='blue')
 
 col1.subheader("General Chemistry:")
-st.markdown("""Topics**
+col1.markdown("""Topics**
     * Math
     * Thermodynamics""")
 
-st.expander("Official AAMC Sample Problems A")
-q1 = st.radio(
+col1.container("Official AAMC Sample Problems A")
+prob1=col1.expander("Official AAMC Sample Problem 2")
+prob1 = st.radio(
     "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
     ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
 
