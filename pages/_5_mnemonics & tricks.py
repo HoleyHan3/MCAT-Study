@@ -15,8 +15,7 @@ with st.expander("**Chemistry Mnemonics**"):
 
 with st.expander("**Biology Mnemonics**"):
         st.markdown("""
-        ### Cranial Nerves Mnemonic
-
+        ### **"Oh, Oh, Oh, To Touch And Feel Very Green Vegetables, AH!"** 
         Remembering the order of the cranial nerves:
 
         - **Olfactory (I)**
@@ -32,7 +31,7 @@ with st.expander("**Biology Mnemonics**"):
         - **Accessory (XI)**
         - **Hypoglossal (XII)**
 
-        Mnemonic: **"Oh, Oh, Oh, To Touch And Feel Very Green Vegetables, AH!"**
+        *(Cranial Nerves Mnemonic)*
         """)
 with st.expander("**Psychology & Sociology Tricks**"):
     st.markdown("- **Freud's Psychosexual Stages**:  \n Sigmund Freud's stages - Oral, Anal, Phallic, Latency, Genital.")
