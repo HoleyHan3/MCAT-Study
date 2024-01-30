@@ -12,7 +12,6 @@ with col1:
         * Math
         * Thermodynamics""")
     
-    st.container("Official AAMC Sample Problems A",border=True)
     st.expander("Official AAMC Sample Problem 2")
     st.radio(
     "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
