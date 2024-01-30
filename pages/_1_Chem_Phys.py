@@ -7,37 +7,31 @@ st.write("Topics include general chemistry, organic chemistry, thermodynamics, k
 st.header('Chemistry',divider='blue')
 
 col1, col2 = st.column(2)
-with col1:
-    st.subheader("General Chemistry:",anchor='GenChem', divider='blue')
-    """ 
-    * **Topics**
-        * Math
-        * Thermodynamics
-        * Kinematics
-        * Work, Force, Energy
-        * Fluid Dynamics")
-        * Electrostatics, Magnetism, Circuits
-        * Electrostatics, Magnetism, Circuits
-    """ 
 
-    st.expander("Official AAMC Sample Problems A")
-    q1 = st.radio(
-        "What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
-        ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
+col1.header("General Chemistry:")
+st.markdown("""Topics**
+    * Math
+    * Thermodynamics""")
+
+st.expander("Official AAMC Sample Problems A")
+q1 = st.radio(
+    "What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
+    ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
 
 
-    st.subheader('Organic Chemistry', anchor='Orgo',divider='green')
-    st.write("- Step-by-step problem-solving guides.")
-    st.write("- Virtual laboratory experiments.")
-    st.write("- Flashcards for memorizing key equations.")
-    st.write("- Links to online textbooks and video lectures.")
+st.subheader('Organic Chemistry', anchor='Orgo',divider='green')
+st.write("- Step-by-step problem-solving guides.")
+st.write("- Virtual laboratory experiments.")
+st.write("- Flashcards for memorizing key equations.")
+st.write("- Links to online textbooks and video lectures.")
 
 
-    st.header('Lab Techniques',divider='orange')
-    st.write("- Step-by-step problem-solving guides.")
-    st.write("- Virtual laboratory experiments.")
-    st.write("- Flashcards for memorizing key equations.")
-    st.write("- Links to online textbooks and video lectures.")
+st.header('Lab Techniques',divider='orange')
+st.write("- Step-by-step problem-solving guides.")
+st.write("- Virtual laboratory experiments.")
+st.write("- Flashcards for memorizing key equations.")
+st.write("- Links to online textbooks and video lectures.")
+
 
 with col2:
     st.header('Physics',divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
