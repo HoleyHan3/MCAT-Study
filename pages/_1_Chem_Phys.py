@@ -6,7 +6,7 @@ st.write("Topics include general chemistry, organic chemistry, thermodynamics, k
 
 st.header('Chemistry',divider='blue')
 
-col1, col2 = st.column(2)
+col1, col2 = st.columns(2)
 
 col1.header("General Chemistry:")
 st.markdown("""Topics**
