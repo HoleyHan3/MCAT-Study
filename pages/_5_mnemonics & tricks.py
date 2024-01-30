@@ -35,9 +35,7 @@ with st.expander("**Anatomy Mnemonics**"):
         - **Glossopharyngeal (IX)**
         - **Vagus (X)**
         - **Accessory (XI)**
-        - **Hypoglossal (XII)**
-
-        *(Cranial Nerves Mnemonic)*""")
+        - **Hypoglossal (XII)**""")
             st.markdown("- **Nerves of the Hand (from Lateral to Medial)**:  \n *Big, Fat, Ten, Fighters, Very, Gracefully, Swipe, Some, Airplanes* (Branches of the Brachial Plexus - *Radial, Median, Ulnar, Femoral, Obturator, Sciatic, Tibial, Fibular, Anterior*)")
             st.markdown("- **Carpal Bones (Proximal Row)**:  \n *Some Lovers Try Positions That They Can't Handle* (Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate)")
             st.markdown("- **Cranial Nerves (Function)**:  \n *Some Say Marry Money, But My Brother Says Big Brains Matter Most* (Sensory, Motor, Both, Motor, Sensory, Both, Motor, Sensory, Both, Sensory, Motor, Motor, Sensory)")
