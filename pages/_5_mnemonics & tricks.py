@@ -9,12 +9,18 @@ with st.expander("**Physics Mnemonics**"):
 
 with st.expander("**Chemistry Mnemonics**"):
     st.markdown("- **OIL RIG**:  \n Oxidation Is Losing, Reduction Is Gaining (Redox Reactions)")
-    st.markdown("- **PEMDAS**:  \n Please Excuse My Dear Aunt Sally (Order of Operations)")
     st.markdown("- **LEO Goes GER**:  \n Lose Electrons Oxidation, Gain Electrons Reduction (Redox Reactions)")
 
 
 with st.expander("**Biology Mnemonics**"):
-        st.markdown("""
+    st.markdown("- **Order of Taxonomy**:  \n *Dear King Philip Came Over For Good Soup* (Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species)")
+    st.markdown("- **DNA Base Pairs**:  \n *A-T, G-C* (Adenine-Thymine, Guanine-Cytosine)")
+    st.markdown("- **Mitosis Phases**:  \n *PMAT - Prophase, Metaphase, Anaphase, Telophase*")
+    st.markdown("- **Photosynthesis Reactants and Products**:  \n *H2O + CO2 + light energy -> C6H12O6 + O2* (Water + Carbon dioxide + light energy -> Glucose + Oxygen)")
+    st.markdown("- **Classification of Living Organisms**:  \n *Kingdom, Phylum, Class, Order, Family, Genus, Species*")
+
+with st.expander("**Anatomy Mnemonics**"):
+            st.markdown("""
         ### **"Oh, Oh, Oh, To Touch And Feel Very Green Vegetables, AH!"** 
         Remembering the order of the cranial nerves:
 
@@ -31,10 +37,16 @@ with st.expander("**Biology Mnemonics**"):
         - **Accessory (XI)**
         - **Hypoglossal (XII)**
 
-        *(Cranial Nerves Mnemonic)*
-        """)
-with st.expander("**Psychology & Sociology Tricks**"):
-    st.markdown("- **Freud's Psychosexual Stages**:  \n Sigmund Freud's stages - Oral, Anal, Phallic, Latency, Genital.")
+        *(Cranial Nerves Mnemonic)*""")
+            st.markdown("- **Nerves of the Hand (from Lateral to Medial)**:  \n *Big, Fat, Ten, Fighters, Very, Gracefully, Swipe, Some, Airplanes* (Branches of the Brachial Plexus - *Radial, Median, Ulnar, Femoral, Obturator, Sciatic, Tibial, Fibular, Anterior*)")
+            st.markdown("- **Carpal Bones (Proximal Row)**:  \n *Some Lovers Try Positions That They Can't Handle* (Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate)")
+            st.markdown("- **Cranial Nerves (Function)**:  \n *Some Say Marry Money, But My Brother Says Big Brains Matter Most* (Sensory, Motor, Both, Motor, Sensory, Both, Motor, Sensory, Both, Sensory, Motor, Motor, Sensory)")
+            st.markdown("- **Cranial Nerves (Sensory, Motor, or Both)**:  \n *Some Say Money Matters, But My Brother Says Big Brains Matter Most* (Sensory, Sensory, Motor, Both, Motor, Motor, Motor, Both, Sensory, Sensory, Sensory, Motor, Both)")
+            st.markdown("- **Muscles of Mastication**:  \n *My Aunt Tried Potatoes, She Made Very Good Yams* (Masseter, Temporalis, Pterygoids - Medial and Lateral, Masseter, Temporalis)")
+
+
+with st.expander("**Psychology & Sociology Mnemonics**"):
+    st.markdown("- **S2P7C11F **:  \n Sigmund Freud's stages - Oral, Anal, Phallic, Latency, Genital.")
 
 with st.expander("**Math Tricks**"):
     st.markdown("- **SOHCAHTOA**")
