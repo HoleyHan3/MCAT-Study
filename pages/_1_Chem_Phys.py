@@ -12,7 +12,7 @@ col1.markdown("""Topics**
     * Math
     * Thermodynamics""")
 
-col1.container("Official AAMC Sample Problems A",border='True')
+col1.container("Official AAMC Sample Problems A",border=True)
 prob1=col1.expander("Official AAMC Sample Problem 2")
 prob1 = st.radio(
     "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
