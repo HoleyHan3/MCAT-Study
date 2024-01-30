@@ -7,9 +7,8 @@ st.write("Topics include molecular biology, cell biology, genetics, metabolism, 
 col1, col2 = st.columns(2)
 
 with col1:
-
-    st.header('Biology', divider='blue')
-    st.subheader("Features:")
+    st.header('Biology', anchor='Bio', divider='blue')
+    st.subheader("Topics:")
     st.write("- Detailed explanations of key concepts.")
     st.write("- Interactive diagrams and animations.")
     st.write("- Practice quizzes with instant feedback.")
@@ -17,8 +16,8 @@ with col1:
 
 
 with col2:
-    st.header('Biochemistry', divider='gray') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
-    st.subheader("Features:")
+    st.header('Biochemistry', anchor='Biochem' divider='gray') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
+    st.subheader("Topics:")
     st.write("- Detailed explanations of key concepts.")
     st.write("- Interactive diagrams and animations.")
     st.write("- Practice quizzes with instant feedback.")
