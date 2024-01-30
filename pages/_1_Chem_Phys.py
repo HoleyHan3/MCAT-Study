@@ -50,3 +50,15 @@ with col2:
         st.markdown("- **Speed of Light in a Vacuum**:  \n $3.00 \\times 10^8 \\text{ m/s}$")
         st.markdown("- **Gravitational Constant**:  \n $6.674 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$")
         st.markdown("- **Planck's Constant**:  \n $6.626 \\times 10^{-34} \\text{ J s}$")
+
+    st.subheader('Kinematics',divider='green')
+    st.write("- Step-by-step problem-solving guides.")
+    st.write("- Virtual laboratory experiments.")
+    st.write("- Flashcards for memorizing key equations.")
+    st.write("- Links to online textbooks and video lectures.")
+
+    st.header('Optics',divider='orange')
+    st.write("- Step-by-step problem-solving guides.")
+    st.write("- Virtual laboratory experiments.")
+    st.write("- Flashcards for memorizing key equations.")
+    st.write("- Links to online textbooks and video lectures.")
