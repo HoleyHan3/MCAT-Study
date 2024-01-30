@@ -1,71 +1,61 @@
 import streamlit as st
-
-class Formula:
-    def __init__(self, name, formula_latex):
-        """
-        Initialize a Formula object with a name and LaTeX representation of the formula.
-
-        Args:
-        - name (str): The name of the formula.
-        - formula_latex (str): The LaTeX representation of the formula.
-        """
-        self.name = name
-        self.formula_latex = formula_latex
+import json
 
 class FormulaManager:
-    def __init__(self):
-        """
-        Initialize a FormulaManager object to manage formulas.
-        """
-        self.formulas = []
+    def __init__(self, storage_file='formulas.json'):
+        self.storage_file = storage_file
+        self.load_formulas()
+    
+    def load_formulas(self):
+        try:
+            with open(self.storage_file, 'r') as file:
+                self.formulas = json.load(file)
+        except FileNotFoundError:
+            self.formulas = []
+
+    def save_formulas(self):
+        with open(self.storage_file, 'w') as file:
+            json.dump(self.formulas, file, indent=4)
 
     def add_formula(self, name, formula_latex):
-        """
-        Add a new formula to the FormulaManager.
+        if not name or not formula_latex:
+            st.error("Name and LaTeX representation are required.")
+            return
 
-        Args:
-        - name (str): The name of the formula.
-        - formula_latex (str): The LaTeX representation of the formula.
-        """
-        self.formulas.append(Formula(name, formula_latex))
+        if any(formula['name'] == name for formula in self.formulas):
+            st.error("A formula with the same name already exists.")
+            return
+
+        self.formulas.append({'name': name, 'formula_latex': formula_latex})
+        self.save_formulas()
+        st.success("Formula added successfully.")
 
     def display_formulas(self):
-        """
-        Display the list of formulas using Streamlit's API.
-        """
         st.subheader("Formulas:")
         if not self.formulas:
             st.write("No formulas added yet.")
         else:
             for formula in self.formulas:
-                st.latex(f"{formula.name}: {formula.formula_latex}")
+                st.markdown(f"**{formula['name']}**:")
+                st.latex(f"{formula['name']}: {formula['formula_latex']}")
+                st.write("---")  # Separator between formulas
 
     def clear_formulas(self):
-        """
-        Clear all formulas from the FormulaManager.
-        """
         self.formulas = []
+        self.save_formulas()
+        st.success("Formulas cleared successfully.")
 
     def get_formula_names(self):
-        """
-        Get a list of names of all formulas stored in the FormulaManager.
-
-        Returns:
-        - List[str]: A list of names of all formulas.
-        """
-        return [formula.name for formula in self.formulas]
+        return [formula['name'] for formula in self.formulas]
 
     def get_formula_latex(self, name):
-        """
-        Get the LaTeX representation of a formula by its name.
-
-        Args:
-        - name (str): The name of the formula to retrieve.
-
-        Returns:
-        - str: The LaTeX representation of the formula.
-        """
         for formula in self.formulas:
-            if formula.name == name:
-                return formula.formula_latex
+            if formula['name'] == name:
+                return formula['formula_latex']
+        return None
+
+    def get_formula_by_name(self, name):
+        for formula in self.formulas:
+            if formula['name'] == name:
+                return formula
         return None
