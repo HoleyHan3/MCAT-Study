@@ -46,7 +46,7 @@ with st.expander("**Physics Equations**"):
     st.markdown("- **Work-Energy Theorem**:  \n $W = Fd$ (Work equals force times distance)")
     st.markdown("- **Second Law of Thermodynamics**:  \n The entropy of an isolated system will always increase over time")
 
-    with st.expander("**Physics Constants**"):
-        st.markdown("- **Speed of Light in a Vacuum**:  \n $3.00 \\times 10^8 \\text{ m/s}$")
-        st.markdown("- **Gravitational Constant**:  \n $6.674 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$")
-        st.markdown("- **Planck's Constant**:  \n $6.626 \\times 10^{-34} \\text{ J s}$")
+with st.expander("**Physics Constants**"):
+    st.markdown("- **Speed of Light in a Vacuum**:  \n $3.00 \\times 10^8 \\text{ m/s}$")
+    st.markdown("- **Gravitational Constant**:  \n $6.674 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$")
+    st.markdown("- **Planck's Constant**:  \n $6.626 \\times 10^{-34} \\text{ J s}$")
