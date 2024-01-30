@@ -15,7 +15,7 @@ st.markdown("""Topics**
 
 st.expander("Official AAMC Sample Problems A")
 q1 = st.radio(
-    "What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?",
+    "**What type of functional group is formed when aspartic acid reacts with another amino acid to form a peptide bond?**",
     ["A. An amine group", "B. An aldehyde group", "C. An amide group","D. A carboxyl group"])
 
 
