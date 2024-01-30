@@ -4,15 +4,39 @@ st.title("Chemistry and Physics")
 st.write("This section covers topics related to chemistry and physics.")
 st.write("Topics include general chemistry, organic chemistry, thermodynamics, kinetics, and more.")
 
-st.header('Chemistry',divider='red')
+st.header('Chemistry',divider='blue')
 
-st.subheader("Features:")
+st.subheader("General Chemistry:",anchor='GenChem', divider='blue')
+st.write("Topics")
+st.write("- Math")
+st.write("- Thermodynamics")
+st.write("- Kinematics")
+st.write("- Work, Force, Energy")
+st.write("- Fluid Dynamics")
+st.write("- Electrostatics, Magnetism, Circuits")
+st.write("- Electrostatics, Magnetism, Circuits")
+
+
+
+
+
+st.subheader('Organic Chemistry', anchor='Orgo',divider='green')
 st.write("- Step-by-step problem-solving guides.")
 st.write("- Virtual laboratory experiments.")
 st.write("- Flashcards for memorizing key equations.")
 st.write("- Links to online textbooks and video lectures.")
 
+
+st.header('Lab Techniques',divider='orange')
+st.write("- Step-by-step problem-solving guides.")
+st.write("- Virtual laboratory experiments.")
+st.write("- Flashcards for memorizing key equations.")
+st.write("- Links to online textbooks and video lectures.")
+
+
+
 st.header('Physics',divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
+
 st.subheader("Features:")
 
 st.write("- Step-by-step problem-solving guides.")
