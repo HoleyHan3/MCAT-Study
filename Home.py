@@ -1,6 +1,6 @@
 import streamlit as st
-import streamlit_authenticator as stauth
-from menu import menu
+#import streamlit_authenticator as stauth
+#from menu import menu
 
 # Initialize st.session_state.role to None
 #if "role" not in st.session_state:
