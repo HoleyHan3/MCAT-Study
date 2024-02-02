@@ -2,5 +2,4 @@ resources/
 .venv/
 .devcontainer/
 config.yaml
-__pycache__/
 .DS_Store
