@@ -5,15 +5,15 @@ st.title("Biology")
 st.write("This section covers topics related to biology.")
 st.write("Topics include molecular biology, cell biology, genetics, metabolism, and more.")
 
-col1, col2 = st.columns(2)
+#col1, col2 = st.columns(2)
 
-with col1:
-    st.header('Biology', anchor='Bio', divider='blue')
-    st.subheader("Topics:")
-    st.write("- Detailed explanations of key concepts.")
-    st.write("- Interactive diagrams and animations.")
-    st.write("- Practice quizzes with instant feedback.")
-    st.write("- Access to external resources and study guides.")
+#with col1:
+st.header('Biology', anchor=None, divider='blue')
+st.subheader("Topics:", anchor = None)
+st.write("- Detailed explanations of key concepts.")
+st.write("- Interactive diagrams and animations.")
+st.write("- Practice quizzes with instant feedback.")
+st.write("- Access to external resources and study guides.")
 
 # Define the main types of molecules, categories, and additional helpful info for MCAT
 molecules_data = {
