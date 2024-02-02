@@ -1,7 +1,5 @@
 import streamlit as st
 
-
-
 def authenticated_menu():
     # Show a navigation menu for authenticated users
     st.sidebar.page_link("Home.py", label="Switch accounts")
