@@ -12,7 +12,7 @@ with open('config.yaml') as file:
 hashed_passwords = stauth.Hasher(config['hashed_passwords']).generate()
 
 # Initialize the authenticator
-authenticator = stauth.Authenticator(
+authenticator = stauth.Authenticate(
     config['credentials'],
     config['cookie']['name'],
     config['cookie']['key'],
