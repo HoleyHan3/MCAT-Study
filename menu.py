@@ -1,6 +1,7 @@
 import streamlit as st
 
 
+
 def authenticated_menu():
     # Show a navigation menu for authenticated users
     st.sidebar.page_link("Home.py", label="Switch accounts")
@@ -13,12 +14,19 @@ def authenticated_menu():
             disabled=st.session_state.role != "super-admin",
         )
 
-
 def unauthenticated_menu():
     # Show a navigation menu for unauthenticated users
-    st.sidebar.page_link("Home.py", label="Log in")
-    st.sidebar.page_link("Home.py", label="Switch accounts")
-    st.sidebar.page_link("pages/user.py", label="Your profile")
+    st.sidebar.page_link("app.py", label="Log in")
+    st.sidebar.page_link("_0_Home.py", label="Home")
+    st.sidebar.page_link("about.py",label="About")
+    st.sidebar.page_link("_1_Chemistry.py",label="Chemistry")
+    st.sidebar.page_link("_1_Physics.py",label="Physics")
+    st.sidebar.page_link("_2_Biochem.py",label="Biochemistry")
+    st.sidebar.page_link("_2_Biology.py",label="Biology")
+    st.sidebar.page_link("_3_Psychology.py",label="Psychology")
+    st.sidebar.page_link("_3_Sociology.py",label="Sociology")
+    st.sidebar.page_link("_4_CARS.py",label="CARS")
+    st.sidebar.page_link("Mnemonics_&_Tricks.py",label="Mnemonics & Tricks")
 
 
 def menu():
