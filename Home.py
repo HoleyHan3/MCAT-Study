@@ -2,6 +2,14 @@ import streamlit as st
 #import streamlit_authenticator as stauth
 #from menu import menu
 
+
+def main():
+    st.sidebar.title("MCAT Study App")
+    
+if __name__ == "__main__":
+    main()
+
+
 # Initialize st.session_state.role to None
 #if "role" not in st.session_state:
 #    st.session_state.role = None
@@ -23,10 +31,3 @@ import streamlit as st
 #menu() # Render the dynamic menu!
 
 #hashed_passwords = stauth.Hasher(['abc', 'def']).generate()
-
-
-def main():
-    st.sidebar.title("MCAT Study App")
-    
-if __name__ == "__main__":
-    main()
