@@ -60,30 +60,10 @@ organic_groups_data = {
      ]
 }
 
-# Create Pandas DataFrame
-organic_groups_df = pd.DataFrame(organic_groups_data)
+# Create a DataFrame from the dictionary
+df_organic_groups = pd.DataFrame(organic_groups_data)
 
-# Create color dictionaries
-core_group_colors = {
-    "Alkane": "lightblue",
-    "Alkene": "lightgreen",
-    "Alkyne": "pink",
-    "Alcohol": "lightcoral",
-    "Ketone": "lightskyblue",
-    "Carboxylic Acid": "yellow"
-}
-derivative_group_colors = {
-    "Ether": "lightgrey",
-    "Aldehyde": "lightyellow",
-    "Ester": "lightgreen",
-    "Amide": "violet"
-}
-
-# Apply color coding to the DataFrame
-st.dataframe(organic_groups_df.style.apply(
-    lambda row: [core_group_colors[row[col]] if row[0] in core_group_colors else derivative_group_colors[row[col]] for col in organic_groups_df.columns],
-    axis=1
-))
+st.dataframe(df_organic_groups)
 
 
 st.header('Lab Techniques',divider='orange')
