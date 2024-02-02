@@ -8,8 +8,8 @@ st.write("Topics include molecular biology, cell biology, genetics, metabolism, 
 #col1, col2 = st.columns(2)
 
 #with col1:
-st.header('Biology', anchor=None, divider='blue')
-st.subheader("Topics:", anchor = None)
+st.header('Biology', anchor = False , divider='blue')
+st.subheader("Topics:", anchor = False)
 st.write("- Detailed explanations of key concepts.")
 st.write("- Interactive diagrams and animations.")
 st.write("- Practice quizzes with instant feedback.")

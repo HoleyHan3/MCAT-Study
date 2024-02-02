@@ -1,11 +1,11 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Biochemistry")
+st.title("Biochemistry", anchor = False)
 st.write("This section covers topics related to biochemistry.")
 st.write("Topics include molecular biology, cell biology, genetics, metabolism, and more.")
 
-st.header('Biochemistry', anchor='Biochem', divider='gray') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
+st.header('Biochemistry', anchor = False, divider='gray') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 st.subheader("Topics:")
 st.write("- Detailed explanations of key concepts.")
 st.write("- Interactive diagrams and animations.")

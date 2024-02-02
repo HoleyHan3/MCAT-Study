@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Physics")
+st.title("Physics",anchor = False)
 st.write("This section covers topics related to physics.")
 st.write("Topics include thermodynamics, kinetics, and more.")
 
@@ -9,7 +9,7 @@ st.write("Topics include thermodynamics, kinetics, and more.")
 #with col1:
 
 #with col2:
-st.header('Physics',divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
+st.header('Physics',anchor = False, divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 st.subheader("Features:")
 st.write("- Step-by-step problem-solving guides.")
 st.write("- Virtual laboratory experiments.")

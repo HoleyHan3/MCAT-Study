@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Chemistry")
+st.title("Chemistry", anchor = False)
 st.write("This section covers topics related to section 1's chemistry.")
 st.write("Topics include general chemistry, organic chemistry, thermodynamics, kinetics, and more.")
 
 
-st.header('**Chemistry**', divider='blue')
+st.header('**Chemistry**', anchor = False, divider='blue')
 st.subheader("**General Chemistry:**")
 st.markdown("""*Topics*
         * Math

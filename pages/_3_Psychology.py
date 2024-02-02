@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.title("Psychology")
+st.title("Psychology", anchor = False)
 st.write("This section covers topics related to psychology.")
 st.write("Topics include social psychology, developmental psychology, personality, and more.")
 
-st.header('Psychology',divider='gray')
+st.header('Psychology',anchor = False, divider='gray')
 st.subheader("Features:")
 st.write("- Case studies for real-world application.")
 st.write("- Practice scenarios for ethical dilemmas.")
