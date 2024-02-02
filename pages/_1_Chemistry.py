@@ -65,6 +65,38 @@ df_organic_groups = pd.DataFrame(organic_groups_data)
 
 st.dataframe(df_organic_groups)
 
+# Create a dictionary to store reaction data (replace with your own data)
+reactions_data = {
+    "Category": [],
+    "Reaction": [],
+    "Reactants": [],
+    "Products": [],
+    "Key Reagents": [],
+    "Mechanism": [],
+    "Notes": []
+}
+
+# Add high-yield reactions with concise information, ensuring accuracy
+# ... (Populate the reactions_data dictionary with your curated content)
+
+# Create DataFrame
+reactions_df = pd.DataFrame(reactions_data)
+
+# Formatting and Highlighting:
+# - Use color-coding for categories and high-yield reactions (e.g., green for addition, blue for substitution, yellow for high-yield)
+# - Apply bold or italics for emphasis
+# - Adjust font size and spacing for readability
+# - Consider using icons or symbols (if desired)
+
+# Interactive Features:
+# - Implement row expansion for detailed mechanisms or notes
+# - Add filtering options based on categories or high-yield status
+# - Include hyperlinks to external resources (e.g., Khan Academy videos)
+# - Provide a download button for PDF or spreadsheet
+
+# Display the table in Streamlit with enhancements
+st.dataframe(reactions_df, ...)  # Customize as needed
+
 
 st.header('Lab Techniques',divider='orange')
 st.write("- Step-by-step problem-solving guides.")
