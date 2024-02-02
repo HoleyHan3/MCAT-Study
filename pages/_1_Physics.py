@@ -12,7 +12,6 @@ st.write("Topics include thermodynamics, kinetics, and more.")
 st.header('Physics',anchor = False, divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 st.subheader("Topics:",anchor="Topics")
 
-
 # Define the data for the improved table
 physics_data = {
     "Category": ["Mechanics", "Mechanics", "Mechanics", "Mechanics", "Mechanics", "Mechanics",
@@ -58,46 +57,38 @@ physics_data = {
                   "V = IR", "F = qvB sin(θ)", "ε = -dΦ/dt", "V = IR", "∇ × E = -∂B/∂t", "v = fλ", 
                   "n₁sin(θ₁) = n₂sin(θ₂)", "Δx = mλ", "f' = f(v ± vo)/(v ∓ vs)", "E = hf", 
                   "E = -13.6 eV/n²", "E = mc²", "Δt' = Δt/√(1 - v²/c²)", "E = mc²"],
-    "Variables": ["v₀, v, a, t", "ΣF, m, a", "W, F, d, θ", "Δp, F, Δt", "a, v, r", "τ, r, F, θ",
-                  "ΔU, Q, W", "Q, m, c, ΔT", "P, V, n, R, T", "η, W, Qh", "ΔS, Q, T", "F, k, q₁, q₂, r",
-                  "V, I, R", "F, q, v, B, θ", "ε, Φ, t", "V, I, R", "E, B, t", "v, f, λ", 
-                  "n₁, θ₁, n₂, θ₂", "Δx, m, λ", "f', v, vo, vs", "E, h, f", 
-                  "E, n", "E, m, c", "Δt', Δt, v, c", "E, m, c"],
-    "Units": ["m/s", "N, kg, m/s²", "J, N, m", "kg m/s", "m/s², m", "N m, N, m, rad", 
-              "J, J, J", "J, kg, J/kg°C, °C", "Pa, m³, mol, J/molK, K", "%", "J/K", "N, C, m, m", 
-              "V, A, Ω", "N, C, m, T, rad", "V, Wb, s", "V, A, Ω", "V/m, T, s", "m/s, Hz, m", 
-              "m, °, m, °", "m, m, m", "Hz", "J", 
-              "eV", "kg, m/s²", "s, s, m/s, m/s"],
-    "Examples/Notes": ["Calculating final velocity with constant acceleration.", 
-                       "Applying forces to determine acceleration.",
-                       "Calculating work done by force over a distance.",
-                       "Determining change in momentum due to force.",
-                       "Calculating centripetal acceleration in circular motion.",
-                       "Determining torque exerted on an object.",
-                       "Calculating change in internal energy of a system.",
-                       "Determining heat transfer and change in temperature.",
-                       "Applying ideal gas law in thermodynamic processes.",
-                       "Calculating efficiency of heat engines.",
-                       "Understanding entropy change in reversible processes.",
-                       "Calculating electric force between charges.",
-                       "Analyzing current-voltage relationships in circuits.",
-                       "Calculating force on a charge in a magnetic field.",
-                       "Understanding induced emf in conductors.",
-                       "Analyzing circuits with alternating and direct currents.",
-                       "Understanding electromagnetic wave properties.",
-                       "Applying laws of reflection and refraction.",
-                       "Analyzing wave interference and diffraction patterns.",
-                       "Understanding frequency shift in moving sound sources.",
-                       "Understanding energy quantization in quantum systems.",
-                       "Applying Bohr model to hydrogen atom energy levels.",
-                       "Analyzing nuclear reactions and stability.",
-                       "Understanding time dilation in special relativity.",
-                       "Understanding mass-energy equivalence.",
-                       "Applying relativistic effects to particle motion."]
+    "Notes": ["Calculating final velocity with constant acceleration.", 
+              "Applying forces to determine acceleration.",
+              "Calculating work done by force over a distance.",
+              "Determining change in momentum due to force.",
+              "Calculating centripetal acceleration in circular motion.",
+              "Determining torque exerted on an object.",
+              "Calculating change in internal energy of a system.",
+              "Determining heat transfer and change in temperature.",
+              "Applying ideal gas law in thermodynamic processes.",
+              "Calculating efficiency of heat engines.",
+              "Understanding entropy change in reversible processes.",
+              "Calculating electric force between charges.",
+              "Analyzing current-voltage relationships in circuits.",
+              "Calculating force on a charge in a magnetic field.",
+              "Understanding induced emf in conductors.",
+              "Analyzing circuits with alternating and direct currents.",
+              "Understanding electromagnetic wave properties.",
+              "Applying laws of reflection and refraction.",
+              "Analyzing wave interference and diffraction patterns.",
+              "Understanding frequency shift in moving sound sources.",
+              "Understanding energy quantization in quantum systems.",
+              "Applying Bohr model to hydrogen atom energy levels.",
+              "Analyzing nuclear reactions and stability.",
+              "Understanding time dilation in special relativity.",
+              "Understanding mass-energy equivalence.",
+              "Applying relativistic effects to particle motion."]
 }
 
 # Create a DataFrame for the improved table
 physics_df = pd.DataFrame(physics_data)
+
+# Display the DataFrame using st.dataframe
 st.dataframe(physics_df)
 
 # Define the data for the key constants table
