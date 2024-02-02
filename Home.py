@@ -1,6 +1,8 @@
 import streamlit as st
-#import streamlit_authenticator as stauth
-#from menu import menu
+import streamlit_authenticator as stauth
+import yaml
+from yaml.loader import SafeLoader
+from menu import menu
 
 
 def main():
