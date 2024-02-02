@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Function to display formulas and explanations for MCAT
 def display_mcat_formulas():

@@ -10,22 +10,109 @@ st.write("Topics include thermodynamics, kinetics, and more.")
 
 #with col2:
 st.header('Physics',anchor = False, divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
-st.subheader("Features:")
-st.write("- Step-by-step problem-solving guides.")
-st.write("- Virtual laboratory experiments.")
-st.write("- Flashcards for memorizing key equations.")
-st.write("- Links to online textbooks and video lectures.")
+st.subheader("Topics:",anchor="Topics")
 
-with st.expander("**Physics Equations**"):
-    st.markdown("- **Kinematic Equations**:  \n $SUVAT$ (where $s$ = displacement, $u$ = initial velocity, $v$ = final velocity, $a$ = acceleration, $t$ = time)")
-    st.markdown("- **Ohm's Law**:  \n $VIR$ (where $V$ = voltage, $I$ = current, $R$ = resistance)")
-    st.markdown("- **Work-Energy Theorem**:  \n $W = Fd$ (Work equals force times distance)")
-    st.markdown("- **Second Law of Thermodynamics**:  \n The entropy of an isolated system will always increase over time")
 
-with st.expander("**Physics Constants**"):
-    st.markdown("- **Speed of Light in a Vacuum**:  \n $3.00 \\times 10^8 \\text{ m/s}$")
-    st.markdown("- **Gravitational Constant**:  \n $6.674 \\times 10^{-11} \\text{ N m}^2/\\text{kg}^2$")
-    st.markdown("- **Planck's Constant**:  \n $6.626 \\times 10^{-34} \\text{ J s}$")
+# Define the data for the improved table
+physics_data = {
+    "Category": ["Mechanics", "Mechanics", "Mechanics", "Mechanics", "Mechanics", "Mechanics",
+                 "Thermodynamics", "Thermodynamics", "Thermodynamics", "Thermodynamics", "Thermodynamics",
+                 "Electricity and Magnetism", "Electricity and Magnetism", "Electricity and Magnetism", 
+                 "Electricity and Magnetism", "Electricity and Magnetism", "Electricity and Magnetism",
+                 "Waves and Optics", "Waves and Optics", "Waves and Optics", "Waves and Optics",
+                 "Modern Physics", "Modern Physics", "Modern Physics", "Modern Physics", "Modern Physics"],
+    "Topics": ["Kinematics", "Newton's Laws", "Work and Energy", "Momentum and Impulse", "Circular Motion", 
+               "Rotational Motion", "Laws of Thermodynamics", "Heat Transfer", "Ideal Gases", 
+               "Heat Engines", "Entropy and Free Energy", "Electrostatics", "Electric Circuits", "Magnetism", 
+               "Electromagnetic Induction", "AC and DC Circuits", "Maxwell's Equations", "Wave Properties", 
+               "Light and Optics", "Interference and Diffraction", "Doppler Effect", "Quantum Mechanics",
+               "Atomic Structure and Spectra", "Nuclear Reactions", "Special Relativity", "Particle Physics"],
+    "Description": ["Study of motion without considering its causes.",
+                    "Fundamental principles governing motion and forces.",
+                    "Transfer of energy due to the application of force.",
+                    "Change in momentum of an object when acted upon by a force.",
+                    "Motion in a circular path at constant speed.",
+                    "Study of objects rotating around an axis.",
+                    "Study of energy and its transformations in physical systems.",
+                    "Transfer of thermal energy between objects.",
+                    "Ideal behavior of gases under various conditions.",
+                    "Engines that convert thermal energy into mechanical work.",
+                    "Measurement of the disorder or randomness of a system.",
+                    "Study of electric charges at rest.",
+                    "Flow of electric charge through a conductor.",
+                    "Study of magnetic fields and their interactions.",
+                    "Generation of electromotive force in a conductor by changing magnetic fields.",
+                    "Analysis of alternating and direct current flow in circuits.",
+                    "Set of equations describing electromagnetic phenomena.",
+                    "Study of properties and behavior of waves.",
+                    "Study of light and its interaction with matter.",
+                    "Phenomena resulting from the interference and diffraction of waves.",
+                    "Change in frequency of a wave due to relative motion between source and observer.",
+                    "Study of behavior of matter and energy at atomic and subatomic levels.",
+                    "Arrangement of electrons in atoms and emission or absorption of electromagnetic radiation.",
+                    "Processes involving changes in the nuclei of atoms.",
+                    "Study of space and time in the absence of gravity.",
+                    "Study of fundamental particles and their interactions."],
+    "Equations": ["v = v₀ + at", "ΣF = ma", "W = Fd cos(θ)", "Δp = FΔt", "a = v²/r", "τ = rF sin(θ)",
+                  "ΔU = Q - W", "Q = mcΔT", "PV = nRT", "η = W/Qh", "ΔS = Qrev/T", "F = k(q₁q₂/r²)", 
+                  "V = IR", "F = qvB sin(θ)", "ε = -dΦ/dt", "V = IR", "∇ × E = -∂B/∂t", "v = fλ", 
+                  "n₁sin(θ₁) = n₂sin(θ₂)", "Δx = mλ", "f' = f(v ± vo)/(v ∓ vs)", "E = hf", 
+                  "E = -13.6 eV/n²", "E = mc²", "Δt' = Δt/√(1 - v²/c²)", "E = mc²"],
+    "Variables": ["v₀, v, a, t", "ΣF, m, a", "W, F, d, θ", "Δp, F, Δt", "a, v, r", "τ, r, F, θ",
+                  "ΔU, Q, W", "Q, m, c, ΔT", "P, V, n, R, T", "η, W, Qh", "ΔS, Q, T", "F, k, q₁, q₂, r",
+                  "V, I, R", "F, q, v, B, θ", "ε, Φ, t", "V, I, R", "E, B, t", "v, f, λ", 
+                  "n₁, θ₁, n₂, θ₂", "Δx, m, λ", "f', v, vo, vs", "E, h, f", 
+                  "E, n", "E, m, c", "Δt', Δt, v, c", "E, m, c"],
+    "Units": ["m/s", "N, kg, m/s²", "J, N, m", "kg m/s", "m/s², m", "N m, N, m, rad", 
+              "J, J, J", "J, kg, J/kg°C, °C", "Pa, m³, mol, J/molK, K", "%", "J/K", "N, C, m, m", 
+              "V, A, Ω", "N, C, m, T, rad", "V, Wb, s", "V, A, Ω", "V/m, T, s", "m/s, Hz, m", 
+              "m, °, m, °", "m, m, m", "Hz", "J", 
+              "eV", "kg, m/s²", "s, s, m/s, m/s"],
+    "Examples/Notes": ["Calculating final velocity with constant acceleration.", 
+                       "Applying forces to determine acceleration.",
+                       "Calculating work done by force over a distance.",
+                       "Determining change in momentum due to force.",
+                       "Calculating centripetal acceleration in circular motion.",
+                       "Determining torque exerted on an object.",
+                       "Calculating change in internal energy of a system.",
+                       "Determining heat transfer and change in temperature.",
+                       "Applying ideal gas law in thermodynamic processes.",
+                       "Calculating efficiency of heat engines.",
+                       "Understanding entropy change in reversible processes.",
+                       "Calculating electric force between charges.",
+                       "Analyzing current-voltage relationships in circuits.",
+                       "Calculating force on a charge in a magnetic field.",
+                       "Understanding induced emf in conductors.",
+                       "Analyzing circuits with alternating and direct currents.",
+                       "Understanding electromagnetic wave properties.",
+                       "Applying laws of reflection and refraction.",
+                       "Analyzing wave interference and diffraction patterns.",
+                       "Understanding frequency shift in moving sound sources.",
+                       "Understanding energy quantization in quantum systems.",
+                       "Applying Bohr model to hydrogen atom energy levels.",
+                       "Analyzing nuclear reactions and stability.",
+                       "Understanding time dilation in special relativity.",
+                       "Understanding mass-energy equivalence.",
+                       "Applying relativistic effects to particle motion."]
+}
+
+# Create a DataFrame for the improved table
+physics_df = pd.DataFrame(physics_data)
+st.dataframe(physics_df)
+
+# Define the data for the key constants table
+constants_data = {
+    "Constant": ["Speed of Light", "Planck's Constant", "Elementary Charge", "Gravitational Constant", "Boltzmann Constant"],
+    "Symbol": ["c", "h", "e", "G", "k"],
+    "Value (SI Units)": ["299,792,458 m/s", "6.62607015 × 10^-34 m² kg / s", "1.602176634 × 10^-19 C", 
+                         "6.67430 × 10^-11 m³ kg^-1 s^-2", "1.380649 × 10^-23 m² kg s^-2 K^-1"]
+}
+
+# Create a DataFrame for the key constants table
+constants_df = pd.DataFrame(constants_data)
+
+# Display the DataFrame using st.dataframe
+st.dataframe(constants_df)
 
 st.subheader('Kinematics',divider='green')
 st.write("- Step-by-step problem-solving guides.")
