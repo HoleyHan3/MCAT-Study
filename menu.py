@@ -1,5 +1,4 @@
 import streamlit as st
-from pages.login import login  # Import the login function from login.py
 
 def authenticated_menu():
     # Show a navigation menu for authenticated users
