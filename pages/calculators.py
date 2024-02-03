@@ -1,5 +1,92 @@
 import streamlit as st
-from components.calculation_engine import FormulaManager
+from components.calculation_engine import Calculator
+import scipy.stats as stats
+
+# Instantiate the Calculator class
+calc = Calculator()
+
+# Define a dictionary of distribution names and their corresponding functions
+distributions = {
+    'Beta': {'func': stats.beta, 'params': ['alpha', 'beta']},
+    'Binomial': {'func': stats.binom, 'params': ['n', 'p']},
+    'Exponential': {'func': stats.expon, 'params': ['scale']},
+    'Gamma': {'func': stats.gamma, 'params': ['k', 'theta']},
+    'Geometric': {'func': stats.geom, 'params': ['p']},
+    'Logistic': {'func': stats.logistic, 'params': ['loc', 'scale']},
+    'Log Normal': {'func': stats.lognorm, 'params': ['s', 'loc', 'scale']},
+    'Negative Binomial': {'func': stats.nbinom, 'params': ['n', 'p']},
+    'Normal': {'func': stats.norm, 'params': ['loc', 'scale']},
+    'Poisson': {'func': stats.poisson, 'params': ['mu']},
+    'T': {'func': stats.t, 'params': ['df']},
+    'Uniform': {'func': stats.uniform, 'params': ['loc', 'scale']},
+    'Weibull': {'func': stats.weibull_min, 'params': ['c', 'scale']}
+}
+
+def run_calculator():
+    st.title("Calculator App")
+    
+    calculator_type = st.selectbox(
+        "Choose a calculator:",
+        ["Derivative", "Integral", "Probability", "Fraction", "Standardization", "Matrix Multiplication"]
+    )
+    
+    if calculator_type == "Derivative":
+        function_str = st.text_input("Enter the function:")
+        if st.button("Calculate Derivative"):
+            derivative, derivative_latex = calc.calculate_derivative(function_str)
+            if derivative:
+                st.write("Derivative:", derivative)
+                st.latex(derivative_latex)
+
+    elif calculator_type == "Integral":
+        function_str = st.text_input("Enter the function:")
+        lower_bound = st.number_input("Enter the lower bound:")
+        upper_bound = st.number_input("Enter the upper bound:")
+        if st.button("Calculate Integral"):
+            integral, integral_latex = calc.calculate_integral(function_str, lower_bound, upper_bound)
+            if integral:
+                st.write("Integral:", integral)
+                st.latex(integral_latex)
+
+    elif calculator_type == "Probability":
+        distribution = st.selectbox("Select a distribution:", list(distributions.keys()))
+        params = []
+        for param in distributions[distribution]['params']:
+            params.append(st.number_input(f"Enter {param}:"))
+        x = st.number_input("Enter x:")
+        case = st.selectbox("Select a case:", ['p<x', 'p>x', 'p1<x<p2'])
+        if st.button("Calculate Probability"):
+            prob = calc.calculate_probability(distribution, params, x, case)
+            st.write("Probability:", prob)
+
+    elif calculator_type == "Fraction":
+        x = st.number_input("Enter a float number:")
+        max_denominator = st.number_input("Enter max denominator:", value=1000)
+        if st.button("Convert to Fraction"):
+            fraction = calc.convert_to_fraction(x, max_denominator)
+            st.write("Fraction:", fraction)
+
+    elif calculator_type == "Standardization":
+        num_list = st.text_input("Enter numbers separated by commas (e.g., 1,2,3):")
+        num_list = [float(num) for num in num_list.split(',')]
+        if st.button("Standardize"):
+            standardized_list = calc.standardize(num_list)
+            st.write("Standardized List:", standardized_list)
+
+    elif calculator_type == "Matrix Multiplication":
+        st.write("Enter matrices:")
+        matrix1 = np.array([[st.number_input(f"Matrix 1 [{i}][{j}]:") for j in range(2)] for i in range(2)])
+        matrix2 = np.array([[st.number_input(f"Matrix 2 [{i}][{j}]:") for j in range(2)] for i in range(2)])
+        if st.button("Multiply Matrices"):
+            result = calc.multiply_matrices(matrix1, matrix2)
+            if result is not None:
+                st.write("Resultant Matrix:")
+                st.write(result)
+
+if __name__ == "__main__":
+    run_calculator()
+
+
 #from modules.menu import menu_with_redirect
 
 # Redirect to app.py if not logged in, otherwise show the navigation menu
@@ -7,50 +94,4 @@ from components.calculation_engine import FormulaManager
 
 #st.title("This page is available to all users")
 #st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
-
-def show():
-    st.title("Calculators")
-    st.write("Welcome to the Calculators page!")
-
-    # Create an instance of FormulaManager
-    formula_manager = FormulaManager()
-
-    # Display a select box to choose a calculator
-    calculator_names = formula_manager.get_formula_names()
-    selected_calculator = st.selectbox("Select a calculator:", calculator_names)
-
-    if selected_calculator:
-        calculator_formula = formula_manager.get_formula_latex(selected_calculator)
-        st.latex(f"Formula: {selected_calculator} = {calculator_formula}")
-
-        # Add user input fields for variables
-        st.write("Enter values for the variables:")
-        variables = {}
-        for variable in calculator_formula.split():
-            if variable.isalpha():
-                variables[variable] = st.number_input(f"Enter value for {variable}:", key=variable)
-
-        # Add a button to calculate the result
-        if st.button("Calculate"):
-            # Validate inputs
-            if len(variables) != len(calculator_formula.split()):
-                st.error("Please enter values for all variables.")
-            else:
-                # Perform calculation
-                result = calculate_result(selected_calculator, calculator_formula, variables)
-                if result is not None:
-                    # Display the result
-                    st.success(f"Result: {result}")
-
-def calculate_result(selected_calculator, calculator_formula, variables):
-    # Implement the calculation logic
-    try:
-        # Evaluate the formula with user-provided variables
-        result = eval(calculator_formula, variables)
-        return result
-    except Exception as e:
-        st.error(f"Error during calculation: {str(e)}")
-        return None
-
-if __name__ == "__main__":
-    show()
+# Instantiate the Calculator class with the distributions dictionary
