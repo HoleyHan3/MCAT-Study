@@ -3,3 +3,4 @@ resources/
 .devcontainer/
 config.yaml
 .DS_Store
+__pycache__/
