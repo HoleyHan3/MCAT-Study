@@ -17,8 +17,7 @@ from menu import menu
 
 def main():
     st.sidebar.title("MCAT Study Links")
-    st.sidebar.
-    
+
 if __name__ == "__main__":
     main()
 
