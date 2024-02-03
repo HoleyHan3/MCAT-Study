@@ -160,7 +160,8 @@ if __name__ == "__main__":
     elif calculator_type == "Matrix Multiplication":
         matrix_multiplication_ui()
 
-''''class CalculationEngine:
+''''
+class CalculationEngine:
     def __init__(self):
         pass
 
