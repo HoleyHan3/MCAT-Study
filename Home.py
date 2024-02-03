@@ -5,17 +5,6 @@ from modules.menu import menu
 #import yaml
 #from yaml.loader import SafeLoader
 
-# Initialize st.session_state.role to None
-if "role" not in st.session_state:
-    st.session_state.role = None
-
-# Retrieve the role from Session State to initialize the widget
-st.session_state._role = st.session_state.role
-
-def set_role():
-    # Callback function to save the role selection to Session State
-    st.session_state.role = st.session_state._role
-
 st.set_page_config(
     page_title="Home",
     page_icon="🧊",
@@ -27,6 +16,19 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+# Initialize st.session_state.role to None
+if "role" not in st.session_state:
+    st.session_state.role = None
+
+# Retrieve the role from Session State to initialize the widget
+st.session_state._role = st.session_state.role
+
+def set_role():
+    # Callback function to save the role selection to Session State
+    st.session_state.role = st.session_state._role
+
+
 # Selectbox to choose role
 #st.selectbox(
 #    "Select your role:",
