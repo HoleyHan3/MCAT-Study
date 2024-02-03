@@ -22,6 +22,12 @@ def main():
 if __name__ == "__main__":
     main()
 
+#st.sidebar.radio('drops sub-menu', options=['add drops', 'view drops'])
+#st.sidebar.checkbox('special')
+    
+#st.sidebar.selectbox('Person incharge', options=['john', 'peter'], index=0)
+#st.sidebar.selectbox('location', options=['manila', 'tokyo'], index=1)
+
 
 # Initialize st.session_state.role to None
 #if "role" not in st.session_state:
