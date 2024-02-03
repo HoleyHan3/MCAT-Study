@@ -14,7 +14,7 @@ def authenticated_menu():
 
 def unauthenticated_menu():
     # Show a navigation menu for unauthenticated users
-    st.sidebar.page_link("pages/app.py", label="Log in")
+    st.sidebar.page_link("pages/login.py", label="Log in")
     st.sidebar.page_link("pages/home.py", label="Home")
     st.sidebar.page_link("pages/about.py",label="About")
     st.sidebar.page_link("pages/biology.py",label="Biology")
