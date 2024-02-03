@@ -39,5 +39,5 @@ def menu_with_redirect():
     # Redirect users to the main page if not logged in, otherwise continue to
     # render the navigation menu
     if "role" not in st.session_state or st.session_state.role is None:
-        st.switch_page("Home.py")
+        st.switch_page("pages/home.py")
     menu()
