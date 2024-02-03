@@ -9,23 +9,46 @@ menu_with_redirect()
 st.title("Login form")
 st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
 
-def login():
-    st.title("Login")
+# login.py
 
-    # Input fields for username and password
+import streamlit as st
+from modules.auth import login_user, register_user
+
+def login_page():
+    st.title("User Authentication")
+
+    # Add tabs for Login and Registration
+    tabs = ["Login", "Register"]
+    selected_tab = st.radio("Select an option", tabs)
+
+    if selected_tab == "Login":
+        login_tab()
+    elif selected_tab == "Register":
+        register_tab()
+
+def login_tab():
+    st.subheader("Login")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
-    # Check if the user clicked the login button
     if st.button("Login"):
-        # Authenticate the user using streamlit_authenticator
-        authenticated = stauth.authenticate(username, password)
+        # Call the login function from the backend logic module
+        login_user(username, password)
 
-        if authenticated:
-            st.success("Login successful!")
-            # Redirect or display authenticated content
-        else:
-            st.error("Invalid username or password. Please try again.")
+def register_tab():
+    st.subheader("Register")
+    username = st.text_input("Username")
+    email = st.text_input("Email")
+    password = st.text_input("Password", type="password")
+    confirm_password = st.text_input("Confirm Password", type="password")
+
+    if password != confirm_password:
+        st.error("Passwords do not match. Please try again.")
+
+    if st.button("Register"):
+        # Call the registration function from the backend logic module
+        register_user(username, email, password)
+        st.success("Registration successful! You can now log in.")
 
 if __name__ == "__main__":
-    login()
+    login_page()
