@@ -2,7 +2,7 @@ import streamlit as st
 #import streamlit_authenticator as stauth
 #import yaml
 #from yaml.loader import SafeLoader
-from menu import menu
+#from menu import menu
 
 # Initialize st.session_state.role to None
 #if "role" not in st.session_state:
