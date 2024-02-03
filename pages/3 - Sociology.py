@@ -52,4 +52,4 @@ sociology_data = {
 sociology_df = pd.DataFrame(sociology_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(sociology_df)
+st.dataframe(sociology_df, hide_index=True)

@@ -76,7 +76,7 @@ molecules_data = {
 df_molecules = pd.DataFrame(molecules_data)
 
 # Display the DataFrame
-st.dataframe(df_molecules)
+st.dataframe(df_molecules, hide_index=True)
 
 
 st.subheader("Biological Processes:", anchor = False)
@@ -139,7 +139,7 @@ krebs_cycle_data = {
 krebs_cycle_df = pd.DataFrame(krebs_cycle_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(krebs_cycle_df)
+st.dataframe(krebs_cycle_df, hide_index=True)
 
 st.subheader("Anatomy & Physiology:", anchor = "A&P", divider='blue')
 
@@ -182,7 +182,7 @@ organ_systems_data = {
 organ_systems_df = pd.DataFrame(organ_systems_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(organ_systems_df)
+st.dataframe(organ_systems_df, hide_index=True)
 
 # Define the basic types of tissues
 tissue_data = {
@@ -225,7 +225,7 @@ tissue_data = {
 tissue_df = pd.DataFrame(tissue_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(tissue_df)
+st.dataframe(tissue_df, hide_index=True)
 
 st.subheader("Immunology", anchor = "Immune", divider='blue')
 
@@ -307,7 +307,7 @@ immune_cells_df_styled = immune_cells_df.style.set_properties(**{'text-align': '
     [{'selector': 'th', 'props': [('text-align', 'left')]}]
 )
 # Display the DataFrame using st.dataframe
-st.dataframe(immune_cells_df_styled)
+st.dataframe(immune_cells_df_styled, hide_index=True)
 
 
 # Create a dictionary of data
@@ -340,7 +340,7 @@ immune_process_data = {
 df_immune_process = pd.DataFrame(immune_process_data)
 
 # Print the DataFrame with color coding for innate and adaptive immunity
-st.dataframe(df_immune_process)
+st.dataframe(df_immune_process, hide_index=True)
 
 # Define the data for the enhanced tables
 ig_data = {
@@ -369,7 +369,7 @@ ig_data = {
 ig_df = pd.DataFrame(ig_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(ig_df)
+st.dataframe(ig_df, hide_index=True)
 
 
 # Define the Krebs cycle steps with products, side-products, reaction types, enzymes/coenzymes, and energy requirements
@@ -430,7 +430,7 @@ krebs_cycle_data = {
 krebs_cycle_df = pd.DataFrame(krebs_cycle_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(krebs_cycle_df)
+st.dataframe(krebs_cycle_df, hide_index=True)
 
 st.subheader("Cell Biology", anchor = "CellBio", divider='blue')
 
@@ -461,7 +461,7 @@ organelle_data = {
 organelle_df = pd.DataFrame(organelle_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(organelle_df)
+st.dataframe(organelle_df, hide_index=True)
 
 # Define the key topics in cell biology with additional categories and suggestions
 cell_biology_data = {
@@ -528,7 +528,7 @@ cell_biology_data = {
 cell_biology_df = pd.DataFrame(cell_biology_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(cell_biology_df)
+st.dataframe(cell_biology_df, hide_index=True)
 
 st.subheader("Genetics", anchor = "Genetics", divider='blue')
 
@@ -558,5 +558,5 @@ genetics_data = {
 genetics_df = pd.DataFrame(genetics_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(genetics_df)
+st.dataframe(genetics_df, ide_index=True)
 

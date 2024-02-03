@@ -90,5 +90,5 @@ chromosomal_df = {
 df_chromosomal = pd.DataFrame(chromosomal_df).T  # Transpose to fit table format
 
 # Display DataFrame with interactive features
-st.title("MCAT Notation Explanations")
+st.title("Chromosomal Notation Explanations")
 st.dataframe(df_chromosomal)

@@ -42,4 +42,4 @@ cars_data = {
 cars_df = pd.DataFrame(cars_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(cars_df)
+st.dataframe(cars_df, hide_index=True)

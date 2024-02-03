@@ -98,7 +98,7 @@ physics_data = {
 physics_df = pd.DataFrame(physics_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(physics_df)
+st.dataframe(physics_df, hide_index=True,)
 
 # Define the data for the key constants table
 constants_data = {
@@ -112,7 +112,7 @@ constants_data = {
 constants_df = pd.DataFrame(constants_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(constants_df)
+st.dataframe(constants_df, hide_index=True,)
 
 st.subheader('Kinematics',divider='green')
 st.write("- Step-by-step problem-solving guides.")

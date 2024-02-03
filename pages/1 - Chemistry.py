@@ -70,7 +70,7 @@ organic_groups_data = {
 # Create a DataFrame from the dictionary
 df_organic_groups = pd.DataFrame(organic_groups_data)
 
-st.dataframe(df_organic_groups)
+st.dataframe(df_organic_groups, hide_index=True)
 
 # Create a dictionary to store reaction data (replace with your own data)
 reactions_data = {
@@ -102,7 +102,7 @@ reactions_df = pd.DataFrame(reactions_data)
 # - Provide a download button for PDF or spreadsheet
 
 # Display the table in Streamlit with enhancements
-st.dataframe(reactions_df)  # Customize as needed
+st.dataframe(reactions_df, hide_index=True)  # Customize as needed
 
 
 st.header('Lab Techniques',divider='orange')
@@ -147,4 +147,4 @@ lab_techniques_data = {
 # Create a DataFrame from the dictionary
 df_lab_techniques = pd.DataFrame(lab_techniques_data)
 
-st.dataframe(df_lab_techniques)
+st.dataframe(df_lab_techniques, hide_index=True)

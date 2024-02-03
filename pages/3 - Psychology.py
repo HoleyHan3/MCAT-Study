@@ -54,4 +54,4 @@ psychology_data = {
 psychology_df = pd.DataFrame(psychology_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(psychology_df)
+st.dataframe(psychology_df,hide_index=True)
