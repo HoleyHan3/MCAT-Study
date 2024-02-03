@@ -4,3 +4,4 @@ resources/
 config.yaml
 .DS_Store
 __pycache__/
+.streamlit/
