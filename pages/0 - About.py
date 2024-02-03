@@ -80,11 +80,11 @@ data = {
 }
 
 # Create DataFrame
-df = pd.DataFrame(data, hide_index=True)
+df = pd.DataFrame(data)
 
 # Display the DataFrame
 with st.expander("Test Day"):
-    st.write(df)
+    st.dataframe(df, hide_index=True)
 
 st.subheader("About the Developers")
 st.write("- Meet the developers and contributors.")
