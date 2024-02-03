@@ -14,17 +14,17 @@ def authenticated_menu():
 
 def unauthenticated_menu():
     # Show a navigation menu for unauthenticated users
-    st.sidebar.page_link("app.py", label="Log in")
-    st.sidebar.page_link("home.py", label="Home")
-    st.sidebar.page_link("about.py",label="About")
-    st.sidebar.page_link("biology.py",label="Biology")
-    st.sidebar.page_link("biochem.py",label="Biochemistry")
-    st.sidebar.page_link("chemistry.py",label="Chemistry")
-    st.sidebar.page_link("physics.py",label="Physics")
-    st.sidebar.page_link("psychology.py",label="Psychology")
-    st.sidebar.page_link("sociology.py",label="Sociology")
-    st.sidebar.page_link("cars.py",label="CARS")
-    st.sidebar.page_link("mnemonics_&_tricks.py",label="Mnemonics & Tricks")
+    st.sidebar.page_link("pages/app.py", label="Log in")
+    st.sidebar.page_link("pages/home.py", label="Home")
+    st.sidebar.page_link("pages/about.py",label="About")
+    st.sidebar.page_link("pages/biology.py",label="Biology")
+    st.sidebar.page_link("pages/biochem.py",label="Biochemistry")
+    st.sidebar.page_link("pages/chemistry.py",label="Chemistry")
+    st.sidebar.page_link("pages/physics.py",label="Physics")
+    st.sidebar.page_link("pages/psychology.py",label="Psychology")
+    st.sidebar.page_link("pages/sociology.py",label="Sociology")
+    st.sidebar.page_link("pages/cars.py",label="CARS")
+    st.sidebar.page_link("pages/mnemonics_&_tricks.py",label="Mnemonics & Tricks")
 
 def menu():
     # Determine if a user is logged in or not, then show the correct

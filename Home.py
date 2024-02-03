@@ -16,7 +16,7 @@ def set_role():
     # Callback function to save the role selection to Session State
     st.session_state.role = st.session_state._role
 
-menu() # Render the dynamic menu!
+#menu() # Render the dynamic menu!
 
 
 
