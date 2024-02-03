@@ -16,7 +16,15 @@ def set_role():
     # Callback function to save the role selection to Session State
     st.session_state.role = st.session_state._role
 
-#menu() # Render the dynamic menu!
+
+# Selectbox to choose role
+st.selectbox(
+    "Select your role:",
+    [None, "user", "admin", "super-admin"],
+    key="_role",
+    on_change=set_role,
+)
+menu() # Render the dynamic menu!
 
 #st.markdown("# Main page ")
 #st.sidebar.markdown("# Main page ")
