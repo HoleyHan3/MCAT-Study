@@ -74,13 +74,13 @@ st.dataframe(df_organic_groups)
 
 # Create a dictionary to store reaction data (replace with your own data)
 reactions_data = {
-    "Category": [],
-    "Reaction": [],
-    "Reactants": [],
-    "Products": [],
-    "Key Reagents": [],
-    "Mechanism": [],
-    "Notes": []
+    "Category": [""],
+    "Reaction": [""],
+    "Reactants": [""],
+    "Products": [""],
+    "Key Reagents": [""],
+    "Mechanism": [""],
+    "Notes": [""]
 }
 
 # Add high-yield reactions with concise information, ensuring accuracy
@@ -102,7 +102,7 @@ reactions_df = pd.DataFrame(reactions_data)
 # - Provide a download button for PDF or spreadsheet
 
 # Display the table in Streamlit with enhancements
-st.dataframe(reactions_df, ...)  # Customize as needed
+st.dataframe(reactions_df)  # Customize as needed
 
 
 st.header('Lab Techniques',divider='orange')
