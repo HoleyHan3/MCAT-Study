@@ -1,8 +1,8 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 import yaml
-from yaml.loader import SafeLoader
 import json
+from yaml.loader import SafeLoader
 from password import save_password, verify_password
 
 # Load configuration from YAML file

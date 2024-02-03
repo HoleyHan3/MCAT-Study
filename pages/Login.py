@@ -2,6 +2,7 @@
 import streamlit as st
 import streamlit_authenticator as stauth
 from modules.auth import login_user, register_user
+from modules.password import save_password, verify_password
 
 #Redirect to app.py if not logged in, otherwise show the navigation menu
 
