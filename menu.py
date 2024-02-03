@@ -34,7 +34,6 @@ def menu():
         return
     authenticated_menu()
 
-
 def menu_with_redirect():
     # Redirect users to the main page if not logged in, otherwise continue to
     # render the navigation menu
