@@ -22,7 +22,6 @@ with st.expander("**Chemistry Mnemonics**"):
     st.markdown("- **OIL RIG**:  \n Oxidation Is Losing, Reduction Is Gaining (Redox Reactions)")
     st.markdown("- **LEO Goes GER**:  \n Lose Electrons Oxidation, Gain Electrons Reduction (Redox Reactions)")
 
-
 with st.expander("**Biology Mnemonics**"):
     st.markdown("- **Order of Taxonomy**:  \n *Dear King Philip Came Over For Good Soup* (Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species)")
     st.markdown("- **DNA Base Pairs**:  \n *A-T, G-C* (Adenine-Thymine, Guanine-Cytosine)")

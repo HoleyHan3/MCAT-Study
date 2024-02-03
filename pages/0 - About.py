@@ -88,7 +88,6 @@ df = pd.DataFrame(data)
 with st.expander("Test Day"):
     st.write(df)
 
-
 st.subheader("About the Developers")
 st.write("- Meet the developers and contributors.")
 st.write("- FAQs and troubleshooting guides.")
