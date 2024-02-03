@@ -21,11 +21,11 @@ page = st.sidebar.radio("Navigation", ["Home", "Login", "About"])
 
 # Display the selected page
 if page == "Home":
-    home.show()
+    'pages/home'.show()
 elif page == "Login":
-    login.show()
+    'pages/login'.show()
 elif page == "About":
-    about.show()
+    'pages/about'.show()
 
 
 # Selectbox to choose role
