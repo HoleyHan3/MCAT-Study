@@ -1,6 +1,7 @@
 import streamlit as st
 from modules.calculation_engine import Calculator
 import scipy.stats as stats
+import numpy as np
 
 # Instantiate the Calculator class
 calc = Calculator()
