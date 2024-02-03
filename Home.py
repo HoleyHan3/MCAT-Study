@@ -2,7 +2,7 @@ import streamlit as st
 #import streamlit_authenticator as stauth
 #import yaml
 #from yaml.loader import SafeLoader
-#from menu import menu
+from menu import menu
 
 # Initialize st.session_state.role to None
 #if "role" not in st.session_state:
@@ -16,7 +16,8 @@ import streamlit as st
 #    st.session_state.role = st.session_state._role
 
 def main():
-    st.sidebar.title("MCAT Study App")
+    st.sidebar.title("MCAT Study Links")
+    st.sidebar.
     
 if __name__ == "__main__":
     main()
