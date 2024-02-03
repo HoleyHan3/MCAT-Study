@@ -16,11 +16,17 @@ def set_role():
     # Callback function to save the role selection to Session State
     st.session_state.role = st.session_state._role
 
-# Define the sidebar navigation
-page = st.sidebar.radio("Navigation", ["Home", "Login", "About"])
-
-
-
+st.set_page_config(
+    page_title="Home",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+)
 # Selectbox to choose role
 #st.selectbox(
 #    "Select your role:",
