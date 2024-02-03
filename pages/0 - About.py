@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 
 st.markdown("# Page 1 🎉")
-st.sidebar.markdown("# Page 1 🎉")
 
 st.title("About")
 st.write("This section provides information about the MCAT.")
