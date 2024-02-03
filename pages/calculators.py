@@ -1,5 +1,5 @@
 import streamlit as st
-from components.calculation_engine import Calculator
+from modules.calculation_engine import Calculator
 import scipy.stats as stats
 
 # Instantiate the Calculator class
