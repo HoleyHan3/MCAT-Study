@@ -19,13 +19,6 @@ def set_role():
 # Define the sidebar navigation
 page = st.sidebar.radio("Navigation", ["Home", "Login", "About"])
 
-# Display the selected page
-if page == "Home":
-    'pages/home'.show()
-elif page == "Login":
-    'pages/login'.show()
-elif page == "About":
-    'pages/about'.show()
 
 
 # Selectbox to choose role
