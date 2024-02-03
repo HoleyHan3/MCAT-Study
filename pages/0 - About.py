@@ -80,7 +80,7 @@ data = {
 }
 
 # Create DataFrame
-df = pd.DataFrame(data, hide_index=True)
+df = pd.DataFrame(data)
 
 # Display the DataFrame
 with st.expander("Test Day"):
