@@ -15,11 +15,14 @@ import streamlit as st
     # Callback function to save the role selection to Session State
 #    st.session_state.role = st.session_state._role
 
-def main():
-    st.sidebar.title("MCAT Study Links")
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
 
-if __name__ == "__main__":
-    main()
+#def main():
+#    st.sidebar.title("MCAT Study Links")
+
+#if __name__ == "__main__":
+#    main()
 
 #st.sidebar.radio('drops sub-menu', options=['add drops', 'view drops'])
 #st.sidebar.checkbox('special')
