@@ -558,5 +558,5 @@ genetics_data = {
 genetics_df = pd.DataFrame(genetics_data)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(genetics_df, ide_index=True)
+st.dataframe(genetics_df, hide_index=True)
 
