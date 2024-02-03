@@ -18,8 +18,6 @@ def set_role():
 
 #menu() # Render the dynamic menu!
 
-
-
 #st.markdown("# Main page ")
 #st.sidebar.markdown("# Main page ")
 
