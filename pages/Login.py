@@ -1,6 +1,7 @@
 # login.py
 import streamlit as st
 import streamlit_authenticator as stauth
+from modules.auth import login_user, register_user
 
 #Redirect to app.py if not logged in, otherwise show the navigation menu
 
@@ -8,9 +9,6 @@ st.title("Login form")
 st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
 
 # login.py
-
-import streamlit as st
-from modules.auth import login_user, register_user
 
 def login_page():
     st.title("User Authentication")

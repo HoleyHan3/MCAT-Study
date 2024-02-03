@@ -25,7 +25,7 @@ if 'username' not in st.session_state:
     st.session_state.username = None
 
 # Function to login user
-def login(username, password, save_password):
+def login_user(username, password, save_password):
     try:
         # Attempt to log in user
         name, authentication_status, username = authenticator.login(username, password)
