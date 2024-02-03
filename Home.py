@@ -1,6 +1,5 @@
 import streamlit as st
 from modules.menu import menu
-from pages import home, login, about
 
 #import streamlit_authenticator as stauth
 #import yaml
