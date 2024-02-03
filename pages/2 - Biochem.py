@@ -91,9 +91,4 @@ df_chromosomal = pd.DataFrame(chromosomal_df).T  # Transpose to fit table format
 
 # Display DataFrame with interactive features
 st.title("MCAT Notation Explanations")
-
-st.markdown("Explore the data:")
-options = {"Filter by description": chromosomal_df, "All notations": chromosomal_df.copy()}
-selected_df = st.selectbox("Choose a view:", options=list(options.keys()))
-st.dataframe(selected_df.sort_values(by=['Notation'], ascending=True))
-st.search(chromosomal_df['Notation'] + " " + chromosomal_df['Explanation'] + " " + chromosomal_df['Clinical Significance'])
+st.dataframe(df_chromosomal)
