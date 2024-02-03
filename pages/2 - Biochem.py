@@ -18,26 +18,26 @@ st.write("- Detailed explanations of key concepts.")
 
 
 amino_acids = {
-    "Alanine (Ala)": {"Initials": "A", "Characteristics": "Nonpolar, aliphatic"},
-    "Arginine (Arg)": {"Initials": "R", "Characteristics": "Positively charged"},
-    "Asparagine (Asn)": {"Initials": "N", "Characteristics": "Polar, uncharged"},
-    "Aspartic Acid (Asp)": {"Initials": "D", "Characteristics": "Negatively charged"},
-    "Cysteine (Cys)": {"Initials": "C", "Characteristics": "Polar, uncharged"},
-    "Glutamine (Gln)": {"Initials": "Q", "Characteristics": "Polar, uncharged"},
-    "Glutamic Acid (Glu)": {"Initials": "E", "Characteristics": "Negatively charged"},
-    "Glycine (Gly)": {"Initials": "G", "Characteristics": "Nonpolar, aliphatic"},
-    "Histidine (His)": {"Initials": "H", "Characteristics": "Positively charged"},
-    "Isoleucine (Ile)": {"Initials": "I", "Characteristics": "Nonpolar, aliphatic"},
-    "Leucine (Leu)": {"Initials": "L", "Characteristics": "Nonpolar, aliphatic"},
-    "Lysine (Lys)": {"Initials": "K", "Characteristics": "Positively charged"},
-    "Methionine (Met)": {"Initials": "M", "Characteristics": "Nonpolar, aliphatic"},
-    "Phenylalanine (Phe)": {"Initials": "F", "Characteristics": "Nonpolar, aromatic"},
-    "Proline (Pro)": {"Initials": "P", "Characteristics": "Nonpolar, aliphatic"},
-    "Serine (Ser)": {"Initials": "S", "Characteristics": "Polar, uncharged"},
-    "Threonine (Thr)": {"Initials": "T", "Characteristics": "Polar, uncharged"},
-    "Tryptophan (Trp)": {"Initials": "W", "Characteristics": "Nonpolar, aromatic"},
-    "Tyrosine (Tyr)": {"Initials": "Y", "Characteristics": "Polar, aromatic"},
-    "Valine (Val)": {"Initials": "V", "Characteristics": "Nonpolar, aliphatic"}
+    "Alanine": {"Single-Letter Initials": "A", "Three-Letter Initials": "Ala",  "Characteristics": "Nonpolar, aliphatic"},
+    "Arginine ": {"Single-Letter Initials:": "R", "Three-Letter Initials": "Arg", "Characteristics": "Positively charged"},
+    "Asparagine": {"Single-Letter Initials:": "N", "Three-Letter Initials":"Asn","Characteristics": "Polar, uncharged"},
+    "Aspartic Acid": {"Single-Letter Initials:": "D", "Three-Letter Initials": "Asp","Characteristics": "Negatively charged"},
+    "Cysteine": {"Single-Letter Initials:": "C", "Three-Letter Initials": "Cys", "Characteristics": "Polar, uncharged"},
+    "Glutamine": {"Single-Letter Initials:": "Q", "Three-Letter Initials": "Gln", "Characteristics": "Polar, uncharged"},
+    "Glutamic Acid": {"Single-Letter Initials:": "E", "Three-Letter Initials": "Glu", "Characteristics": "Negatively charged"},
+    "Glycine": {"Single-Letter Initials:": "G", "Three-Letter Initials": "Gly", "Characteristics": "Nonpolar, aliphatic"},
+    "Histidine": {"Single-Letter Initials:": "H", "Three-Letter Initials": "His", "Characteristics": "Positively charged"},
+    "Isoleucine": {"Single-Letter Initials:": "I", "Three-Letter Initials": "Ile", "Characteristics": "Nonpolar, aliphatic"},
+    "Leucine": {"Single-Letter Initials:": "L", "Three-Letter Initials": "Leu", "Characteristics": "Nonpolar, aliphatic"},
+    "Lysine": {"Single-Letter Initials:": "K", "Three-Letter Initials": "Lys", "Characteristics": "Positively charged"},
+    "Methionine": {"Single-Letter Initials:": "M", "Three-Letter Initials": "Met", "Characteristics": "Nonpolar, aliphatic"},
+    "Phenylalanine": {"Single-Letter Initials:": "F", "Three-Letter Initials": "Phe", "Characteristics": "Nonpolar, aromatic"},
+    "Proline": {"Single-Letter Initials:": "P", "Three-Letter Initials": "Pro",  "Characteristics": "Nonpolar, aliphatic"},
+    "Serine": {"Single-Letter Initials:": "S", "Three-Letter Initials": "Ser", "Characteristics": "Polar, uncharged"},
+    "Threonine": {"Single-Letter Initials:": "T", "Three-Letter Initials": "Thr", "Characteristics": "Polar, uncharged"},
+    "Tryptophan": {"Single-Letter Initials:": "W", "Three-Letter Initials": "Trp", "Characteristics": "Nonpolar, aromatic"},
+    "Tyrosine": {"Single-Letter Initials:": "Y", "Three-Letter Initials": "Tyr",  "Characteristics": "Polar, aromatic"},
+    "Valine": {"Single-Letter Initials:": "V", "Three-Letter Initials": "Val", "Characteristics": "Nonpolar, aliphatic"}
 }
 
 # Create a DataFrame from the dictionary
