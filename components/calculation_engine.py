@@ -101,6 +101,33 @@ def multiply_matrices(matrix1, matrix2):
         return result
 
 
+class Calculator:
+    def __init__(self):
+        self.calculator_type = None
+
+    def select_calculator(self):
+        self.calculator_type = st.selectbox("Choose a calculator:", list(distributions.keys()) + ["Derivative", "Integral", "Fraction", "Standardization", "Matrix Multiplication"])
+
+    def calculate_derivative(self):
+        # ... (code for derivative calculation)
+
+    def calculate_integral(self):
+        # ... (code for integral calculation)
+
+    # ... (methods for other calculator types)
+
+if __name__ == "__main__":
+    st.title("Multi-Calculator App")
+
+    calculator = Calculator()
+    calculator.select_calculator()
+
+    if calculator.calculator_type == "Derivative":
+        # ... (code for derivative calculator UI and calculation)
+    elif calculator.calculator_type == "Integral":
+        # ... (code for integral calculator UI and calculation)
+    # ... (similarly for other calculator types)
+
 class CalculationEngine:
     def __init__(self):
         pass
@@ -176,3 +203,4 @@ class CalculationEngine:
         # Perform unit conversion
         converted_value = value * conversion_factors[from_unit] / conversion_factors[to_unit]
         return converted_value
+
