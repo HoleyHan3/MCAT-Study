@@ -64,7 +64,7 @@ nomenclature_df = {
 df_nomenclature = pd.DataFrame(nomenclature_df)
 
 # Display the DataFrame using st.dataframe
-st.dataframe(df_nomenclature)
+st.dataframe(df_nomenclature, hide_index=True)
 
 # Define notations and explanations as a dictionary
 chromosomal_df = {
