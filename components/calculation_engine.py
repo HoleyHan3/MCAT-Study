@@ -72,6 +72,69 @@ class Calculator:
         except Exception as e:
             st.error(f"Error multiplying matrices: {str(e)}")
 
+
+    def run_calculator(self):
+        st.title("Calculator App")
+        
+        calculator_type = st.selectbox(
+            "Choose a calculator:",
+            ["Derivative", "Integral", "Probability", "Fraction", "Standardization", "Matrix Multiplication"]
+        )
+        
+        if calculator_type == "Derivative":
+            function_str = st.text_input("Enter the function:")
+            if st.button("Calculate Derivative"):
+                derivative, derivative_latex = self.calculate_derivative(function_str)
+                if derivative:
+                    st.write("Derivative:", derivative)
+                    st.latex(derivative_latex)
+
+        elif calculator_type == "Integral":
+            function_str = st.text_input("Enter the function:")
+            lower_bound = st.number_input("Enter the lower bound:")
+            upper_bound = st.number_input("Enter the upper bound:")
+            if st.button("Calculate Integral"):
+                integral, integral_latex = self.calculate_integral(function_str, lower_bound, upper_bound)
+                if integral:
+                    st.write("Integral:", integral)
+                    st.latex(integral_latex)
+
+        elif calculator_type == "Probability":
+            distribution = st.selectbox("Select a distribution:", list(distributions.keys()))
+            params = []
+            for param in distributions[distribution]['params']:
+                params.append(st.number_input(f"Enter {param}:"))
+            x = st.number_input("Enter x:")
+            case = st.selectbox("Select a case:", ['p<x', 'p>x', 'p1<x<p2'])
+            if st.button("Calculate Probability"):
+                prob = self.calculate_probability(distribution, params, x, case)
+                st.write("Probability:", prob)
+
+        elif calculator_type == "Fraction":
+            x = st.number_input("Enter a float number:")
+            max_denominator = st.number_input("Enter max denominator:", value=1000)
+            if st.button("Convert to Fraction"):
+                fraction = self.convert_to_fraction(x, max_denominator)
+                st.write("Fraction:", fraction)
+
+        elif calculator_type == "Standardization":
+            num_list = st.text_input("Enter numbers separated by commas (e.g., 1,2,3):")
+            num_list = [float(num) for num in num_list.split(',')]
+            if st.button("Standardize"):
+                standardized_list = self.standardize(num_list)
+                st.write("Standardized List:", standardized_list)
+
+        elif calculator_type == "Matrix Multiplication":
+            st.write("Enter matrices:")
+            matrix1 = np.array([[st.number_input(f"Matrix 1 [{i}][{j}]:") for j in range(2)] for i in range(2)])
+            matrix2 = np.array([[st.number_input(f"Matrix 2 [{i}][{j}]:") for j in range(2)] for i in range(2)])
+            if st.button("Multiply Matrices"):
+                result = self.multiply_matrices(matrix1, matrix2)
+                if result is not None:
+                    st.write("Resultant Matrix:")
+                    st.write(result)
+
+
 # Define a dictionary of distribution names and their corresponding functions
 distributions = {
     'Beta': {'func': stats.beta, 'params': ['alpha', 'beta']},
@@ -89,76 +152,12 @@ distributions = {
     'Weibull': {'func': stats.weibull_min, 'params': ['c', 'scale']}
 }
 
-def derivative_ui():
-    function_str = st.text_input("Enter the function:")
-    if st.button("Calculate Derivative"):
-        derivative, derivative_latex = calc.calculate_derivative(function_str)
-        if derivative:
-            st.write("Derivative:", derivative)
-            st.latex(derivative_latex)
+# Instantiate the Calculator class
+calc = Calculator()
 
-def integral_ui():
-    function_str = st.text_input("Enter the function:")
-    lower_bound = st.number_input("Enter the lower bound:")
-    upper_bound = st.number_input("Enter the upper bound:")
-    if st.button("Calculate Integral"):
-        integral, integral_latex = calc.calculate_integral(function_str, lower_bound, upper_bound)
-        if integral:
-            st.write("Integral:", integral)
-            st.latex(integral_latex)
+# Run the calculator application
+calc.run_calculator()
 
-def probability_ui():
-    distribution = st.selectbox("Select a distribution:", list(distributions.keys()))
-    params = []
-    for param in distributions[distribution]['params']:
-        params.append(st.number_input(f"Enter {param}:"))
-    x = st.number_input("Enter x:")
-    case = st.selectbox("Select a case:", ['p<x', 'p>x', 'p1<x<p2'])
-    if st.button("Calculate Probability"):
-        prob = calc.calculate_probability(distribution, params, x, case)
-        st.write("Probability:", prob)
-
-def fraction_ui():
-    x = st.number_input("Enter a float number:")
-    max_denominator = st.number_input("Enter max denominator:", value=1000)
-    if st.button("Convert to Fraction"):
-        fraction = calc.convert_to_fraction(x, max_denominator)
-        st.write("Fraction:", fraction)
-
-def standardization_ui():
-    num_list = st.text_input("Enter numbers separated by commas (e.g., 1,2,3):")
-    num_list = [float(num) for num in num_list.split(',')]
-    if st.button("Standardize"):
-        standardized_list = calc.standardize(num_list)
-        st.write("Standardized List:", standardized_list)
-
-def matrix_multiplication_ui():
-    st.write("Enter matrices:")
-    matrix1 = np.array([[st.number_input(f"Matrix 1 [{i}][{j}]:") for j in range(2)] for i in range(2)])
-    matrix2 = np.array([[st.number_input(f"Matrix 2 [{i}][{j}]:") for j in range(2)] for i in range(2)])
-    if st.button("Multiply Matrices"):
-        result = calc.multiply_matrices(matrix1, matrix2)
-        if result is not None:
-            st.write("Resultant Matrix:")
-            st.write(result)
-
-if __name__ == "__main__":
-    st.title("Multi-Calculator App")
-    calc = Calculator()
-    calculator_type = st.selectbox("Choose a calculator:", ["Derivative", "Integral", "Probability", "Fraction", "Standardization", "Matrix Multiplication"])
-
-    if calculator_type == "Derivative":
-        derivative_ui()
-    elif calculator_type == "Integral":
-        integral_ui()
-    elif calculator_type == "Probability":
-        probability_ui()
-    elif calculator_type == "Fraction":
-        fraction_ui()
-    elif calculator_type == "Standardization":
-        standardization_ui()
-    elif calculator_type == "Matrix Multiplication":
-        matrix_multiplication_ui()
 
 ''''
 class CalculationEngine:
