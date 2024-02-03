@@ -47,3 +47,22 @@ df_amino_acids = pd.DataFrame.from_dict(amino_acids, orient='index')
 
 # Display the DataFrame in the Streamlit app
 st.dataframe(df_amino_acids)
+
+
+# Create a dictionary containing the data for the table
+nomenclature_df = {
+    "Component": ["Gene Names", "Protein Names", "Variant Names", "Numbers", "Italics"],
+    "Rule": ["Italicized, lowercase", "Uppercase, capitalize 1st letter", "Standard mutation format (e.g., K27M)", "Arabic numerals (e.g., 27 for position)", "Gene/protein names are italicized"],
+    "Examples": ["*geneA*, *proteinX*", "Hemoglobin, Insulin", "R106Q, ΔF508", "27, 1024", "*geneA*, *proteinX*"],
+    "Notes": ["Italics are used to denote specific gene or protein symbols, such as *geneA* and *proteinX*, distinguishing them from regular text.",
+              "Uppercase letters, as in Hemoglobin and Insulin, emphasize specific protein identifiers, ensuring clarity in text.",
+              "The standard mutation format, as seen in R106Q and ΔF508, facilitates uniform identification of mutations in genes or proteins across scientific literature. In 'R106Q', 'R' represents the original amino acid (arginine) mutated to 'Q' (glutamine) at position 106. The triangle (Δ) in 'ΔF508' signifies a deletion mutation, specifically the deletion of a phenylalanine (F) residue at position 508.",
+              "Arabic numerals, like 27 and 1024, denote positions within gene or protein sequences, or quantify elements in experiments.",
+              "Italics, applied to *geneA* and *proteinX*, highlight gene or protein names, emphasizing their significance in text."]
+}
+
+# Create a DataFrame from the dictionary
+df_nomenclature = pd.DataFrame(nomenclature_df)
+
+# Display the DataFrame using st.dataframe
+st.dataframe(df_nomenclature)
