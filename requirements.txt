@@ -6,5 +6,4 @@ pandas
 streamlit-authenticator
 streamlit-searchbox
 sympy
-numpy
 scipy
