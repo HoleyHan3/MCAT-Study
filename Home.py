@@ -1,5 +1,6 @@
 import streamlit as st
 from modules.menu import menu
+from pages import home, login, about
 
 #import streamlit_authenticator as stauth
 #import yaml
@@ -16,16 +17,27 @@ def set_role():
     # Callback function to save the role selection to Session State
     st.session_state.role = st.session_state._role
 
+# Define the sidebar navigation
+page = st.sidebar.radio("Navigation", ["Home", "Login", "About"])
+
+# Display the selected page
+if page == "Home":
+    home.show()
+elif page == "Login":
+    login.show()
+elif page == "About":
+    about.show()
+
 
 # Selectbox to choose role
-st.selectbox(
-    "Select your role:",
-    [None, "user", "admin", "super-admin"],
-    key="_role",
-    on_change=set_role,
-)
+#st.selectbox(
+#    "Select your role:",
+#    [None, "user", "admin", "super-admin"],
+#    key="_role",
+#    on_change=set_role,
+#)
 
-menu() # Render the dynamic menu!
+#menu() # Render the dynamic menu!
 
 #st.markdown("# Main page ")
 #st.sidebar.markdown("# Main page ")
