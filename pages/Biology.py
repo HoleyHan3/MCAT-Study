@@ -434,6 +434,35 @@ st.dataframe(krebs_cycle_df)
 
 st.subheader("Cell Biology", anchor = "CellBio", divider='blue')
 
+
+# Create a dictionary containing the organelle information
+organelle_data = {
+    "Organelle": ["Mitochondria", "Nucleus", "Endoplasmic Reticulum (ER)", "Golgi Apparatus", "Lysosomes", "Peroxisomes", "Endosomes", "Chloroplasts"],
+    "Structure": ["Double membrane structure (outer and inner membranes)", "Surrounded by a double membrane (nuclear envelope)", "Rough ER (with ribosomes) and Smooth ER (without ribosomes)", "Flattened membranous sacs (cisternae)", "Membrane-bound vesicles containing digestive enzymes", "Single membrane-bound organelles with oxidative enzymes", "Membrane-bound vesicles involved in sorting and processing", "Double membrane structure containing thylakoids and stroma"],
+    "Function": ["- Inner membrane highly folded into cristae surrounding the matrix \n - Responsible for ATP production through cellular respiration (glycolysis, citric acid cycle, oxidative phosphorylation) \n - Involved in apoptosis \n - Maternally inherited",
+                 "- Houses genetic material (DNA) \n - Controls cellular activities \n - Site of transcription (mRNA synthesis) \n - Assembly of ribosomal subunits",
+                 "- Rough ER: Protein synthesis and folding \n - Smooth ER: Lipid synthesis, detoxification, calcium ion storage",
+                 "- Modifies, sorts, and packages proteins and lipids into vesicles for transport",
+                 "- Break down cellular waste, foreign particles, and organelles through hydrolysis \n - Fuse with endocytic vesicles and autophagosomes for degradation",
+                 "- Break down fatty acids, amino acids, detoxify harmful substances such as hydrogen peroxide",
+                 "- Sort, process, and traffic endocytosed material \n - Mature into lysosomes or fuse with other organelles for material exchange",
+                 "- Site of photosynthesis, converting light energy into chemical energy (ATP and sugars) \n - Contains chlorophyll for capturing light energy"],
+    "High-Yield Facts": ["- Inner membrane subunits include complexes I (NADH dehydrogenase), II (succinate dehydrogenase), III (cytochrome bc1 complex), IV (cytochrome c oxidase), and V (ATP synthase). \n - The outer membrane contains porins, allowing the passage of small molecules. \n - Mitochondrial DNA encodes for a small number of essential proteins and RNA molecules.",
+                         "- The nucleus is the control center of the cell, containing instructions for cellular activities encoded in DNA. \n - It communicates with the cytoplasm through nuclear pores. \n - The nucleolus contains subunits involved in ribosome assembly, such as ribosomal RNA (rRNA) and ribosomal proteins.",
+                         "- Rough ER subunits include ribosomes attached to the membrane, involved in protein synthesis. \n - Smooth ER contains enzymes for lipid synthesis and detoxification, such as cytochrome P450 enzymes. \n - The rough ER synthesizes proteins that are destined for secretion or incorporation into the cell membrane.",
+                         "- The Golgi apparatus consists of cis, medial, and trans cisternae, involved in sequential processing of proteins. \n - It adds carbohydrate groups to proteins (glycosylation). \n - Golgi subunits include enzymes like glycosyltransferases and phosphatases involved in protein modification.",
+                         "- Lysosomes contain acidic hydrolases that work optimally at low pH. \n - They are involved in recycling cellular components through autophagy. \n - Lysosomes are involved in the degradation of cellular debris and foreign particles.",
+                         "- Peroxisomes contain catalase, an enzyme that breaks down hydrogen peroxide into water and oxygen. \n - They are involved in lipid metabolism and detoxification. \n - Peroxisomes play a role in the oxidation of fatty acids and the synthesis of certain lipids.",
+                         "- Endosomes are involved in the internalization and processing of cell surface receptors. \n - They play a role in signaling pathways and antigen presentation. \n - Endosomes mature into late endosomes or fuse with lysosomes for degradation.",
+                         "- Chloroplasts are unique to plant cells and some protists. \n - They contain their own DNA and ribosomes, similar to mitochondria. \n - Thylakoid membranes contain chlorophyll and other pigments for light absorption during photosynthesis."]
+}
+
+# Create the DataFrame
+organelle_df = pd.DataFrame(organelle_data)
+
+# Display the DataFrame using st.dataframe
+st.dataframe(organelle_df)
+
 # Define the key topics in cell biology with additional categories and suggestions
 cell_biology_data = {
     "Topic": [
