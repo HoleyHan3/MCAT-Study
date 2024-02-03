@@ -15,8 +15,8 @@ import streamlit as st
     # Callback function to save the role selection to Session State
 #    st.session_state.role = st.session_state._role
 
-st.markdown("# Main page 🎈")
-st.sidebar.markdown("# Main page 🎈")
+st.markdown("# Main page ")
+st.sidebar.markdown("# Main page ")
 
 #def main():
 #    st.sidebar.title("MCAT Study Links")
