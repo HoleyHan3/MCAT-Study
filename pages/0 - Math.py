@@ -15,9 +15,9 @@ st.header("Pre-req Math:", anchor = False)
 
 # Define the data for the DataFrame
 math_df = {
-    "Math Skill": ["Algebraic Manipulation", "Functions and Graphs", "Trigonometry", "Geometry",
+        "Math Skill": ["Algebraic Manipulation", "Functions and Graphs", "Trigonometry", "Geometry",
                     "Statistics and Probability", "Calculus", "Data Interpretation", "Units and Conversions"],
-    "Description": ["Ability to simplify expressions, solve equations, and factor polynomials.",
+        "Description": ["Ability to simplify expressions, solve equations, and factor polynomials.",
                     "Understanding of basic functions (linear, quadratic, exponential, logarithmic) and ability to interpret graphs.",
                     "Familiarity with trigonometric functions, identities, and solving trigonometric equations.",
                     "Knowledge of basic geometry concepts such as area, perimeter, volume, and geometric transformations.",
@@ -25,15 +25,16 @@ math_df = {
                     "Basic understanding of differential and integral calculus concepts, including limits, derivatives, and integrals.",
                     "Analyzing and interpreting data presented in tables, graphs, and charts.",
                     "Proficiency in converting between different units of measurement and understanding dimensional analysis."],
-    "Formula/Equation/Symbol": ["Quadratic formula: x = (-b ± √(b² - 4ac)) / (2a)\nBinomial theorem: (a + b)^n = ∑(n choose k) a^(n-k) b^k\nExponential properties: a^m * a^n = a^(m+n), a^m / a^n = a^(m-n)",
-                                 "Linear equation: y = mx + b\nQuadratic equation: ax² + bx + c = 0\nExponential function: y = ab^x",
-                                 "Pythagorean theorem: a² + b² = c²\nSine, cosine, tangent definitions: sinθ = opposite/hypotenuse, cosθ = adjacent/hypotenuse, tanθ = opposite/adjacent",
-                                 "Area of a rectangle: A = lw\nArea of a triangle: A = 1/2bh\nVolume of a cylinder: V = πr²h",
-                                 "Mean: x̄ = Σxi / n\nStandard deviation: s = √(Σ(xi - x̄)² / (n-1))\nProbability: P(E) = number of favorable outcomes / total number of outcomes",
-                                 "Derivative: df/dx\nIntegral: ∫ f(x) dx",
+        "Formula/Equation/Symbol": ["Quadratic formula: \(x = \frac{{-b ± \sqrt{{b^2 - 4ac}}}}{{2a}}\)\nBinomial theorem: \((a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\)\nExponential properties: \(a^m \cdot a^n = a^{m+n}\), \(\frac{{a^m}}{{a^n}} = a^{m-n}\)",
+                                 "Linear equation: \(y = mx + b\)\nQuadratic equation: \(ax^2 + bx + c = 0\)\nExponential function: \(y = ab^x\)",
+                                 "Pythagorean theorem: \(a^2 + b^2 = c^2\)\nSine, cosine, tangent definitions: \(\sin \theta = \frac{{\text{{opposite}}}}{{\text{{hypotenuse}}}}\), \(\cos \theta = \frac{{\text{{adjacent}}}}{{\text{{hypotenuse}}}}\), \(\tan \theta = \frac{{\text{{opposite}}}}{{\text{{adjacent}}}}\)",
+                                 "Area of a rectangle: \(A = lw\)\nArea of a triangle: \(A = \frac{1}{2}bh\)\nVolume of a cylinder: \(V = \pi r^2 h\)",
+                                 "Mean: \(\bar{x} = \frac{{\sum x_i}}{{n}}\)\nStandard deviation: \(s = \sqrt{\frac{{\sum (x_i - \bar{x})^2}}{{n-1}}}\)\nProbability: \(P(E) = \frac{{\text{{number of favorable outcomes}}}}{{\text{{total number of outcomes}}}}\)",
+                                 "Derivative: \(\frac{{df}}{{dx}}\)\nIntegral: \(\int f(x) \, dx\)",
                                  "None specific, but understanding graphs, charts, and tables is essential.",
                                  "None specific, but dimensional analysis is important."],
 }
+
 
 # Create a DataFrame
 df_math = pd.DataFrame(math_df)
