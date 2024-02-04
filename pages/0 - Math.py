@@ -38,19 +38,9 @@ math_df = {
 # Create a DataFrame
 df_math = pd.DataFrame(math_df)
 
-# Render LaTeX equations in the DataFrame
-styled_df_math = df_math.style.format({'Formula/Equation/Symbol': lambda x: x.replace('\n', '<br>')})
-
-# Display the DataFrame using Streamlit
-st.write(df_math, unsafe_allow_html=True)
-
-# Display the DataFrame using Streamlit
-st.header("Math Skills for the MCAT")
-st.dataframe(df_math)
-
-# Display the DataFrame using Streamlit
-st.header("Math Skills for the MCAT")
-st.dataframe(df_math)
+# Convert DataFrame to LaTeX format
+df_latex_math = df_math.to_latex(index=False, escape=False)
+st.dataframe(df_latex_math)
 
 st.subheader("Algebraic Equations for the MCAT")
 st.graphviz_chart('''
