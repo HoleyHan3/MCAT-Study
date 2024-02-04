@@ -41,7 +41,8 @@ df_math = pd.DataFrame(math_df)
 # Render LaTeX equations in the DataFrame
 styled_df_math = df_math.style.format({'Formula/Equation/Symbol': lambda x: x.replace('\n', '<br>')})
 
-st.dataframe(styled_df_math)
+# Display the DataFrame using Streamlit
+st.write(df_math, unsafe_allow_html=True)
 
 # Display the DataFrame using Streamlit
 st.header("Math Skills for the MCAT")
