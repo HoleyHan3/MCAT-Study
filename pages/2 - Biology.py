@@ -19,8 +19,7 @@ st.header('Biology', anchor = False , divider='blue')
 st.subheader("Molecules:", anchor = False)
 st.write("- Detailed explanations of key concepts.")
 st.write("- Interactive diagrams and animations.")
-st.write("- Practice quizzes with instant feedback.")
-st.write("- Access to external resources and study guides.")
+
 
 # Define the main types of molecules, categories, and additional helpful info for MCAT
 molecules_data = {
@@ -78,6 +77,23 @@ df_molecules = pd.DataFrame(molecules_data)
 # Display the DataFrame
 st.dataframe(df_molecules, hide_index=True)
 
+
+# Display the flowchart using st.graphviz_chart
+st.header("Cell Signaling Pathways")
+st.graphviz_chart('''
+    digraph {
+        node [shape=box]
+        
+        Identify_Signaling_Molecules [label="Identify Signaling Molecules\n(hormones, neurotransmitters)"]
+        Determine_Receptors [label="Determine Receptors\n(activation, signaling cascades)"]
+        Trace_Downstream_Effects [label="Trace Downstream Effects\n(gene expression, protein synthesis)"]
+        Consider_Feedback_Mechanisms [label="Consider Feedback Mechanisms\n(regulation)\n1. Positive Feedback: Amplifies Signal\n2. Negative Feedback: Dampens Signal"]
+        
+        Identify_Signaling_Molecules -> Determine_Receptors
+        Determine_Receptors -> Trace_Downstream_Effects
+        Trace_Downstream_Effects -> Consider_Feedback_Mechanisms
+    }
+''', use_container_width=True)
 
 st.subheader("Biological Processes:", anchor = False)
 
@@ -228,6 +244,23 @@ tissue_df = pd.DataFrame(tissue_data)
 st.dataframe(tissue_df, hide_index=True)
 
 st.subheader("Immunology", anchor = "Immune", divider='blue')
+
+st.graphviz_chart('''
+    digraph {
+        node [shape=box]
+        
+        Hematopoietic_Stem_Cell [label="Hematopoietic Stem Cell\n(Bone Marrow)\nCapable of self-renewal and differentiation into various blood cell lineages"]
+        Common_Lymphoid_Progenitor [label="Common Lymphoid Progenitor\nGives rise to cells of lymphoid lineage\n- T cells (T lymphocytes)\n- B cells (B lymphocytes)\n- Natural Killer (NK) cells"]
+        Common_Myeloid_Progenitor [label="Common Myeloid Progenitor\nDifferentiates into cells of myeloid lineage\n- Granulocytes (Neutrophils, Eosinophils, Basophils)\n- Monocytes\n- Dendritic Cells\n- Megakaryocytes"]
+        Lymphoid_Lineage [label="Lymphoid Lineage\nIncludes mature lymphocytes responsible for adaptive immune responses"]
+        Myeloid_Lineage [label="Myeloid Lineage\nComprises innate immune cells involved in immediate defense against pathogens"]
+        
+        Hematopoietic_Stem_Cell -> Common_Lymphoid_Progenitor
+        Hematopoietic_Stem_Cell -> Common_Myeloid_Progenitor
+        Common_Lymphoid_Progenitor -> Lymphoid_Lineage
+        Common_Myeloid_Progenitor -> Myeloid_Lineage
+    }
+''', use_container_width=True)
 
 # Define the types of immune cells with detailed descriptions and additional categories
 immune_cells_data = {

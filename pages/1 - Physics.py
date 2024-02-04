@@ -116,12 +116,40 @@ st.dataframe(constants_df, hide_index=True,)
 
 st.subheader('Kinematics',divider='green')
 st.write("- Step-by-step problem-solving guides.")
-st.write("- Virtual laboratory experiments.")
-st.write("- Flashcards for memorizing key equations.")
-st.write("- Links to online textbooks and video lectures.")
 
-st.header('Optics',divider='orange')
+st.subheader("Projectile Motion Problem Solving")
+st.graphviz_chart('''
+    digraph {
+        node [shape=box]
+        
+        Identify_Initial_Conditions [label="Identify Initial Conditions\n(velocity, angle)"]
+        Break_Down_Motion [label="Break Down Motion\n(horizontal, vertical)"]
+        Use_Kinematic_Equations [label="Use Kinematic Equations\n(range, max height, time)\n1. Range (R) = (v^2 * sin(2θ)) / g\n2. Max Height (H) = (v^2 * sin^2(θ)) / (2g)\n3. Time of Flight (T) = (2 * v * sin(θ)) / g"]
+        Verify_Results [label="Verify Results\nCheck for Physical Consistency\n(positive values, realistic magnitudes)"]
+        
+        Identify_Initial_Conditions -> Break_Down_Motion
+        Break_Down_Motion -> Use_Kinematic_Equations
+        Use_Kinematic_Equations -> Verify_Results
+    }
+''', use_container_width=True)
+
+
+st.subheader('Optics',divider='orange')
 st.write("- Step-by-step problem-solving guides.")
-st.write("- Virtual laboratory experiments.")
-st.write("- Flashcards for memorizing key equations.")
-st.write("- Links to online textbooks and video lectures.")
+
+
+st.subheader("Circuit Analysis")
+st.graphviz_chart('''
+    digraph {
+        node [shape=box]
+        
+        Identify_Components [label="Identify Components\n(resistors, capacitors)"]
+        Analyze_Circuit_Layout [label="Analyze Circuit Layout\n(series, parallel, combo)\n1. Series: R_eq = R1 + R2\n2. Parallel: (1/R_eq) = (1/R1) + (1/R2)"]
+        Apply_Ohms_Law_Kirchhoffs_Laws [label="Apply Ohm's Law & Kirchhoff's Laws\n(voltage, current)\n1. Ohm's Law: V = IR\n2. Kirchhoff's Laws: ΣV = 0, ΣI = 0"]
+        Verify_Results [label="Verify Results\nCheck for Power Balance\n(Power In = Power Out)"]
+        
+        Identify_Components -> Analyze_Circuit_Layout
+        Analyze_Circuit_Layout -> Apply_Ohms_Law_Kirchhoffs_Laws
+        Apply_Ohms_Law_Kirchhoffs_Laws -> Verify_Results
+    }
+''', use_container_width=True)
