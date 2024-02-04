@@ -38,8 +38,9 @@ math_df = {
 
 # Create a DataFrame
 df_math = pd.DataFrame(math_df)
-styled_df_math = df_math.to_latex()
-st.dataframe(styled_df_math)
+
+df_latex_math = df_math.to_latex()
+st.dataframe(df_latex_math)
 
 
 # Display the DataFrame using Streamlit
