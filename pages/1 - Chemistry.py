@@ -28,7 +28,7 @@ st.graphviz_chart('''
         Base [label="For Bases"]
         Salt_Buffer [label="For Salts/\nBuffers"]
         Special_Cases [label="Special Cases"]
-        Calculate_pH [label="Calculate pH\n(pH = -log[H3O⁺])"]
+        Calculate_pH [label="Calculate pH\n(pH = -log[$H_3$O⁺])"]
         Verify_Results [label="Verify Results"]
         
         Identify_Compound -> Acid_Base_Check
