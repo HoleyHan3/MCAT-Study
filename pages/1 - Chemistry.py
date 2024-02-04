@@ -50,6 +50,32 @@ st.graphviz_chart('''
 # Display the flowchart using st.graphviz_chart
 #st.graphviz_chart(flowchart_dot_code, use_container_width=True)
 
+# Define the Graphviz dot code for the flowchart
+st.subheader("**Electrochemistry Problems:**")
+
+flowchart_dot_code = '''
+    digraph {
+        node [shape=box]
+        
+        Identify_Redox [label="Identify Redox Reaction"]
+        Separate_Half_Reactions [label="Separate into\nHalf-Reactions"]
+        Look_Up_Standard_Potentials [label="Look Up\nStandard\nPotentials"]
+        Balance_Electrons [label="Balance\nElectrons"]
+        Combine_Half_Reactions [label="Combine\nHalf-Reactions"]
+        Calculate_Standard_Cell_Potential [label="Calculate\nStandard Cell\nPotential\n(E°)"]
+        Determine_Spontaneity [label="Determine\nSpontaneity"]
+        Verify_Results [label="Verify Results"]
+        
+        Identify_Redox -> Separate_Half_Reactions
+        Separate_Half_Reactions -> Look_Up_Standard_Potentials
+        Separate_Half_Reactions -> Balance_Electrons
+        Look_Up_Standard_Potentials -> Combine_Half_Reactions
+        Balance_Electrons -> Combine_Half_Reactions
+        Combine_Half_Reactions -> Calculate_Standard_Cell_Potential
+        Calculate_Standard_Cell_Potential -> Determine_Spontaneity
+        Determine_Spontaneity -> Verify_Results
+    }
+'''
 
 st.subheader("**General Chemistry:**")
 st.markdown("""*Topics*
