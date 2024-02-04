@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import graphviz
+
 #from modules.menu import menu_with_redirect
 
 # Redirect to app.py if not logged in, otherwise show the navigation menu
@@ -13,7 +15,43 @@ st.write("This section covers topics related to section 1's chemistry.")
 st.write("Topics include general chemistry, organic chemistry, thermodynamics, kinetics, and more.")
 
 
-st.header('**Chemistry**', anchor = False, divider='blue')
+st.header('**General Chemistry Problems**', anchor = False, divider='blue')
+st.subheader("**Acid-Base Problems:**")
+
+# Define the Graphviz dot code for the flowchart
+flowchart_dot_code = '''
+    digraph {
+        node [shape=box]
+        
+        Identify_Compound [label="Identify Compound"]
+        Acid_Base_Check [label="Is it\nan Acid\nor Base?"]
+        Acid [label="For Acids"]
+        Base [label="For Bases"]
+        Salt_Buffer [label="For Salts/\nBuffers"]
+        Special_Cases [label="Special Cases"]
+        Calculate_pH [label="Calculate pH\n(pH = -log[H3O⁺])"]
+        Verify_Results [label="Verify Results"]
+        
+        Identify_Compound -> Acid_Base_Check
+        
+        Acid_Base_Check -> Acid [label="Acid"]
+        Acid_Base_Check -> Base [label="Base"]
+        Acid_Base_Check -> Salt_Buffer [label="Salt/Buffer"]
+        Acid_Base_Check -> Special_Cases [label="Special Cases"]
+        
+        Acid -> Calculate_pH
+        Base -> Calculate_pH
+        Salt_Buffer -> Calculate_pH
+        Special_Cases -> Calculate_pH
+        
+        Calculate_pH -> Verify_Results
+    }
+'''
+
+# Display the flowchart using st.graphviz_chart
+st.graphviz_chart(flowchart_dot_code, use_container_width=True)
+
+
 st.subheader("**General Chemistry:**")
 st.markdown("""*Topics*
         * Math
