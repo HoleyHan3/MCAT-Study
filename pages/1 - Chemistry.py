@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import graphviz
 
 #from modules.menu import menu_with_redirect
 
