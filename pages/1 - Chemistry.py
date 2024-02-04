@@ -19,7 +19,7 @@ st.header('**General Chemistry Problems**', anchor = False, divider='blue')
 st.subheader("**Acid-Base Problems:**")
 
 # Define the Graphviz dot code for the flowchart
-flowchart_dot_code = '''
+st.graphviz_chart('''
     digraph {
         node [shape=box]
         
@@ -46,10 +46,10 @@ flowchart_dot_code = '''
         
         Calculate_pH -> Verify_Results
     }
-'''
+''')
 
 # Display the flowchart using st.graphviz_chart
-st.graphviz_chart(flowchart_dot_code, use_container_width=True)
+#st.graphviz_chart(flowchart_dot_code, use_container_width=True)
 
 
 st.subheader("**General Chemistry:**")
