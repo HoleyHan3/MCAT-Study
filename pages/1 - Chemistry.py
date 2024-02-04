@@ -22,14 +22,14 @@ st.graphviz_chart('''
     digraph {
         node [shape=box]
         
-        Identify_Compound [label="Identify Compound"]
+        Identify_Compound [label="Identify Compound\n(e.g., acetic acid, NaOH, NH4Cl)"]
         Acid_Base_Check [label="Is it\nan Acid\nor Base?"]
-        Acid [label="For Acids"]
-        Base [label="For Bases"]
-        Salt_Buffer [label="For Salts/\nBuffers"]
-        Special_Cases [label="Special Cases"]
-        Calculate_pH [label="Calculate pH\n(pH = -log[$H_3$O⁺])"]
-        Verify_Results [label="Verify Results"]
+        Acid [label="For Acids\n(e.g., HCl, H2SO4)"]
+        Base [label="For Bases\n(e.g., NaOH, KOH)"]
+        Salt_Buffer [label="For Salts/\nBuffers\n(e.g., NH4Cl, CH3COONa)"]
+        Special_Cases [label="Special Cases\n(e.g., amphiprotic compounds, complex ions)"]
+        Calculate_pH [label="Calculate pH\n(pH = -log[$H_3$O⁺])\n(pH = 14 - pOH)"]
+        Verify_Results [label="Verify Results\n(Experimental Confirmation,\nConsistency Check,\n pH Range)"]
         
         Identify_Compound -> Acid_Base_Check
         
@@ -53,17 +53,17 @@ st.graphviz_chart('''
 # Define the Graphviz dot code for the flowchart
 st.subheader("**Electrochemistry Problems:**")
 
-flowchart_dot_code = '''
-    digraph {
+st.graphviz_chart('''
+        digraph {
         node [shape=box]
         
-        Identify_Redox [label="Identify Redox Reaction"]
-        Separate_Half_Reactions [label="Separate into\nHalf-Reactions"]
-        Look_Up_Standard_Potentials [label="Look Up\nStandard\nPotentials"]
-        Balance_Electrons [label="Balance\nElectrons"]
-        Combine_Half_Reactions [label="Combine\nHalf-Reactions"]
-        Calculate_Standard_Cell_Potential [label="Calculate\nStandard Cell\nPotential\n(E°)"]
-        Determine_Spontaneity [label="Determine\nSpontaneity"]
+        Identify_Redox [label="Identify Redox Reaction\n(highly electronegative/positive elements)"]
+        Separate_Half_Reactions [label="Separate into\nHalf-Reactions\n(reduction & oxidation)"]
+        Look_Up_Standard_Potentials [label="Look Up\nStandard\nPotentials\n(in tables or given)"]
+        Balance_Electrons [label="Balance\nElectrons\n(using coefficients)"]
+        Combine_Half_Reactions [label="Combine\nHalf-Reactions\n(ensure electron cancelation)"]
+        Calculate_Standard_Cell_Potential [label="Calculate\nStandard Cell\nPotential\n(E° = E°(reduction) - E°(oxidation))"]
+        Determine_Spontaneity [label="Determine\nSpontaneity\n(E° > 0: spontaneous)"]
         Verify_Results [label="Verify Results"]
         
         Identify_Redox -> Separate_Half_Reactions
@@ -75,7 +75,7 @@ flowchart_dot_code = '''
         Calculate_Standard_Cell_Potential -> Determine_Spontaneity
         Determine_Spontaneity -> Verify_Results
     }
-'''
+''')
 
 st.subheader("**General Chemistry:**")
 st.markdown("""*Topics*
