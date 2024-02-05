@@ -14,7 +14,7 @@ st.write("Topics include molecular biology, cell biology, genetics, metabolism, 
 
 st.header('Biochemistry', anchor = False, divider='blue') #colors: blue, green, orange, red, violet, gray/grey, rainbow.
 st.subheader("Amino acids:")
-st.write("- Detailed explanations of key concepts.")
+st.write("- Try out this amino acid quizzing game. https://www.stolaf.edu/depts/chemistry/courses/toolkits/373/js/aminoac/")
 
 
 amino_acids = {
