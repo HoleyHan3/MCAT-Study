@@ -6,3 +6,4 @@ config.yaml
 __pycache__/
 .streamlit/config.toml
 data/
+demo.ipynb
