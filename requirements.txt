@@ -10,3 +10,4 @@ sympy
 scipy
 graphviz
 sqlalchemy
+pillow

@@ -3,4 +3,4 @@ from typing import Optional
 import sqlalchemy as sa
 import sqlalchemy.orm as so
 
-class User(self):
+#class User(self):
