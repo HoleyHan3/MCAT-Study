@@ -5,18 +5,6 @@ from menu import menu
 #import yaml
 #from yaml.loader import SafeLoader
 
-st.set_page_config(
-    page_title="Home",
-    page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
-)
-
 # Initialize st.session_state.role to None
 if "role" not in st.session_state:
     st.session_state.role = None
@@ -27,6 +15,20 @@ st.session_state._role = st.session_state.role
 def set_role():
     # Callback function to save the role selection to Session State
     st.session_state.role = st.session_state._role
+
+
+#st.set_page_config(
+#    page_title="Home",
+#    page_icon="🧊",
+#    layout="wide",
+#    initial_sidebar_state="expanded",
+#    menu_items={
+#        'Get Help': 'https://www.extremelycoolapp.com/help',
+#        'Report a bug': "https://www.extremelycoolapp.com/bug",
+#        'About': "# This is a header. This is an *extremely* cool app!"
+#    }
+#)
+
 
 
 # Selectbox to choose role
