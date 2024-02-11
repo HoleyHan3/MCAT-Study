@@ -41,18 +41,6 @@ st.markdown(f"You are currently logged with the role of {st.session_state.role}.
 
 # login.py
 
-def login_page():
-    st.title("User Authentication")
-
-    # Add tabs for Login and Registration
-    tabs = ["Login", "Register"]
-    selected_tab = st.radio("Select an option", tabs)
-
-    if selected_tab == "Login":
-        login_tab()
-    elif selected_tab == "Register":
-        register_tab()
-
 def login_tab():
     st.subheader("Login")
     username = st.text_input("Username")
