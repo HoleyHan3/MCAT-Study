@@ -54,7 +54,7 @@ def menu_with_redirect():
         st.switch_page("pages/home.py")
     menu()
 
-if st.button("Log out"):
+#if st.button("Log out"):
 #                logout()
 def logout():
     st.session_state.logged_in = False
