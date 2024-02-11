@@ -27,16 +27,14 @@ def unauthenticated_menu():
     st.sidebar.page_link("pages/mnemonics_&_tricks.py",label="Mnemonics & Tricks")
 
 def menu():
-    # Determine if a user is logged in or not, then show the correct
-    # navigation menu
+    # Determine if a user is logged in or not, then show the correct navigation menu
     if "role" not in st.session_state or st.session_state.role is None:
         unauthenticated_menu()
         return
     authenticated_menu()
 
 def menu_with_redirect():
-    # Redirect users to the main page if not logged in, otherwise continue to
-    # render the navigation menu
+    # Redirect users to the main page if not logged in, otherwise continue to render the navigation menu
     if "role" not in st.session_state or st.session_state.role is None:
         st.switch_page("pages/home.py")
     menu()
