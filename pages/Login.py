@@ -46,6 +46,3 @@ def register_tab():
         # Call the registration function from the backend logic module
         register_user(username, email, password)
         st.success("Registration successful! You can now log in.")
-
-if __name__ == "__main__":
-    login_page()
