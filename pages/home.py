@@ -14,6 +14,7 @@ import pandas as pd
 #)
 
 st.markdown("# Home")
+st.markdown(f"You are currently logged with the role of {st.session_state.role}.")  
 st.sidebar.markdown("# Home")
 
 st.title("About")
