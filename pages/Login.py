@@ -20,6 +20,23 @@ authenticator = stauth.Authenticate(
 #Redirect to app.py if not logged in, otherwise show the navigation menu
 authenticator.login()
 
+'''
+if st.session_state["authentication_status"]:
+    authenticator.logout()
+    st.write(f'Welcome *{st.session_state["name"]}*')
+    st.title('Some content')
+elif st.session_state["authentication_status"] is False:
+    st.error('Username/password is incorrect')
+elif st.session_state["authentication_status"] is None:
+    st.warning('Please enter your username and password')
+
+if st.session_state["authentication_status"]:
+    try:
+        if authenticator.reset_password(st.session_state["username"]):
+            st.success('Password modified successfully')
+    except Exception as e:
+        st.error(e)'''
+
 st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
 
 # login.py
@@ -45,17 +62,41 @@ def login_tab():
         # Call the login function from the backend logic module
         login_user(username, password)
 
-def register_tab():
+def reset_password():
+    if st.session_state["authentication_status"]:
+        try:
+            if authenticator.reset_password(st.session_state["username"]):
+                st.success('Password modified successfully')
+        except Exception as e:
+            st.error(e)
+
+def register_page():
     st.subheader("Register")
-    username = st.text_input("Username")
-    email = st.text_input("Email")
-    password = st.text_input("Password", type="password")
-    confirm_password = st.text_input("Confirm Password", type="password")
+    try:
+        email_of_registered_user, username_of_registered_user, name_of_registered_user = authenticator.register_user(preauthorization=False)
+        if email_of_registered_user:
+            st.success('User registered successfully')
+    except Exception as e:
+        st.error(e)
 
-    if password != confirm_password:
-        st.error("Passwords do not match. Please try again.")
+def forgot_password():
+    try:
+        username_of_forgotten_password, email_of_forgotten_password, new_random_password = authenticator.forgot_password()
+        if username_of_forgotten_password:
+            st.success('New password to be sent securely')
+            # The developer should securely transfer the new password to the user.
+        elif username_of_forgotten_password == False:
+            st.error('Username not found')
+    except Exception as e:
+        st.error(e)
 
-    if st.button("Register"):
-        # Call the registration function from the backend logic module
-        register_user(username, email, password)
-        st.success("Registration successful! You can now log in.")
+def forgot_username():
+    try:
+        username_of_forgotten_username, email_of_forgotten_username = authenticator.forgot_username()
+        if username_of_forgotten_username:
+            st.success('Username to be sent securely')
+            # The developer should securely transfer the username to the user.
+        elif username_of_forgotten_username == False:
+            st.error('Email not found')
+    except Exception as e:
+        st.error(e)
