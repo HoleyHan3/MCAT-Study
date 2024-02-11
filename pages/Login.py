@@ -18,6 +18,7 @@ authenticator = stauth.Authenticate(
 )
 
 #Redirect to app.py if not logged in, otherwise show the navigation menu
+authenticator.login()
 
 st.markdown(f"You are currently logged with the role of {st.session_state.role}.")
 
