@@ -1,5 +1,5 @@
 import streamlit as st
-from modules.menu import menu
+from menu import menu
 
 #import streamlit_authenticator as stauth
 #import yaml

@@ -2,7 +2,7 @@
 import streamlit as st
 
 # Import the menu_with_redirect function from the menu module
-from modules.menu import menu_with_redirect
+from menu import menu_with_redirect
 
 # Redirect users based on their authentication status
 menu_with_redirect()
